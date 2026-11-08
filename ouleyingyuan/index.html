@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欧乐影院-在线电影资源_高清影视推荐_流畅观看体验</title>
+  <meta name="description" content="欧乐影院提供在线电影资源、高清影视推荐与流畅观看体验，涵盖热门电影、剧集、纪录片等，适合喜欢在线观影的用户浏览与选择。">
+  <meta name="keywords" content="高清电影,在线剧集,影视推荐,观影指南,电影资源">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f1a2c'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23f5b342' stroke-width='2'/%3E%3Cpath d='M13 11l7 5-7 5z' fill='%23f5b342'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --bg-dark: #0b0f17;
+      --bg-panel: #141b26;
+      --bg-card: #1b2433;
+      --border-soft: #2a3442;
+      --text-primary: #eef2f8;
+      --text-secondary: #a6b2c2;
+      --text-muted: #6f7d8e;
+      --accent: #f5b342;
+      --accent-soft: #f5b34233;
+      --accent-hover: #ffc75f;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-card: 0 8px 20px rgba(0,0,0,0.4);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --sticky-height: 108px;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-height);
+    }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-dark);
+      box-shadow: 0 1px 0 var(--border-soft);
+    }
+    .announce-bar {
+      background: linear-gradient(90deg, #1e2a3a, #0f1a2c);
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 0.875rem;
+      padding: 8px 0;
+      color: var(--text-secondary);
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .announce-tag {
+      background: var(--accent);
+      color: #0b0f17;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+    .announce-text {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .announce-meta {
+      margin-left: auto;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .site-header {
+      background: rgba(11, 15, 23, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 12px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: var(--bg-card);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-soft);
+    }
+    .brand-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--text-primary);
+    }
+    .brand-text span {
+      color: var(--accent);
+    }
+    .header-nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .header-nav a {
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .header-nav a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 30px;
+      padding: 4px 6px 4px 16px;
+      gap: 8px;
+    }
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      padding: 6px 0;
+      width: 160px;
+      outline: none;
+    }
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+    .search-box button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0b0f17;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-box button:hover {
+      background: var(--accent-hover);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: radial-gradient(ellipse at 30% 20%, #1a2a3f, #0b0f17 75%);
+      padding: 48px 0 40px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .hero-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content {
+      flex: 1 1 360px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      border: 1px solid #f5b34233;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #0b0f17;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--border-soft);
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      background: #f5b3420d;
+    }
+    .hero-visual {
+      flex: 1 1 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+    }
+
+    /* 三栏主布局 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 250px;
+      gap: 32px;
+      padding: 36px 0 56px;
+    }
+
+    /* 左栏 */
+    .sidebar-left {
+      font-size: 0.9rem;
+    }
+    .sidebar-section {
+      margin-bottom: 28px;
+    }
+    .sidebar-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .channel-list a {
+      display: block;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+    .channel-list a:hover {
+      background: var(--bg-card);
+      color: var(--accent);
+    }
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .filter-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .filter-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* 中栏 */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+    .section {
+      scroll-margin-top: var(--sticky-height);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 18px;
+    }
+    .media-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      border: 1px solid var(--border-soft);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+    }
+    .media-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+    }
+    .card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 2px 8px;
+      border-radius: 12px;
+      align-self: flex-start;
+      margin-bottom: 8px;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.4;
+      color: #fff;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-soft);
+      padding-top: 10px;
+      margin-top: auto;
+    }
+    .card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* 列表样式 */
+    .update-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .update-item {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-soft);
+      flex-wrap: wrap;
+    }
+    .update-item:last-child {
+      border-bottom: none;
+    }
+    .update-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 120px;
+    }
+    .update-summary {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      flex: 1;
+    }
+    .update-badge {
+      font-size: 0.7rem;
+      background: var(--bg-panel);
+      padding: 2px 8px;
+      border-radius: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 分类入口网格 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 12px 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .category-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--bg-card);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--bg-panel);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      border: 1px solid var(--border-soft);
+    }
+    .deep-dive h3 {
+      font-size: 1.25rem;
+      margin: 22px 0 10px;
+      color: var(--accent);
+    }
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+    .deep-dive p {
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .deep-dive ul {
+      color: var(--text-secondary);
+      padding-left: 20px;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    details {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 0 16px;
+    }
+    details[open] {
+      border-color: var(--accent);
+    }
+    summary {
+      padding: 14px 0;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-primary);
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    details[open] summary::after {
+      content: "−";
+    }
+    details p {
+      padding: 0 0 16px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .comment-item {
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      border-left: 3px solid var(--accent);
+    }
+    .comment-user {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .comment-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .news-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 12px;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .news-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .news-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rec-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .rec-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* 右栏 */
+    .sidebar-right {
+      font-size: 0.85rem;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .toc-list a {
+      display: block;
+      padding: 5px 0 5px 12px;
+      border-left: 2px solid var(--border-soft);
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s;
+      font-size: 0.85rem;
+    }
+    .toc-list a:hover {
+      border-left-color: var(--accent);
+      color: var(--accent);
+    }
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hot-item {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .hot-rank {
+      font-weight: 800;
+      color: var(--accent);
+      font-size: 0.9rem;
+      min-width: 20px;
+    }
+    .hot-name {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--bg-panel);
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 0 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+    .footer-brand .brand-text {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .footer-desc {
+      color: var(--text-secondary);
+      max-width: 260px;
+      line-height: 1.6;
+      font-size: 0.85rem;
+    }
+    .footer-col h4 {
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-col a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--border-soft);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+      }
+      .sidebar-right {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-left {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        order: 2;
+      }
+      .sidebar-left .sidebar-section {
+        flex: 1 1 140px;
+        margin-bottom: 0;
+      }
+      .main-content {
+        order: 1;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero-stats {
+        gap: 16px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .header-inner {
+        gap: 16px;
+      }
+      .header-actions {
+        margin-left: 0;
+        width: 100%;
+      }
+      .search-box {
+        width: 100%;
+      }
+      .search-box input {
+        width: 100%;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .sticky-wrap {
+        position: static;
+      }
+      html {
+        scroll-padding-top: 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* 搜索无结果提示 */
+    .no-result-msg {
+      display: none;
+      padding: 14px 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .no-result-msg.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 吸顶公告条 + 页头 -->
+  <div class="sticky-wrap">
+    <div class="announce-bar">
+      <div class="container">
+        <span class="announce-tag">上新</span>
+        <span class="announce-text">本周新增 12 部高清影片 · 经典港片修复专题上线</span>
+        <span class="announce-meta">每日 10:00 更新</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-logo">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="12" stroke="#f5b342" stroke-width="2"/>
+              <path d="M13 11l8 5-8 5V11z" fill="#f5b342"/>
+            </svg>
+          </div>
+          <span class="brand-text">欧乐<span>影院</span></span>
+        </div>
+        <nav class="header-nav" aria-label="主导航">
+          <a href="/#section-popular">热门推荐</a>
+          <a href="/#section-updates">最新更新</a>
+          <a href="/#section-categories">分类浏览</a>
+          <a href="/#section-deep">深度解析</a>
+          <a href="/#section-faq">常见问题</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="search" id="siteSearch" placeholder="搜索影片、剧集或类型..." aria-label="搜索影片">
+            <button type="button" id="searchBtn" aria-label="搜索">搜索</button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">高清 · 流畅 · 每日更新</span>
+        <h1>欧乐影院</h1>
+        <p class="hero-desc">汇集热门电影、高分剧集与经典纪录片，提供清晰流畅的在线观影体验。无论是通勤路上还是睡前放松，都能快速找到适合当下心情的影视内容。</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">2,800+</span>
+            <span class="stat-label">影片资源</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">120+</span>
+            <span class="stat-label">每日更新</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4.8</span>
+            <span class="stat-label">用户评分</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="/#section-popular" class="btn-primary">浏览热门影视</a>
+          <a href="/#section-updates" class="btn-outline">查看最新更新</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="影视播放界面示意">
+          <rect x="20" y="30" width="320" height="200" rx="16" fill="#1b2433" stroke="#2a3442" stroke-width="2"/>
+          <rect x="20" y="30" width="320" height="36" rx="16" fill="#141b26"/>
+          <circle cx="42" cy="48" r="6" fill="#f5b342"/>
+          <circle cx="62" cy="48" r="6" fill="#2a3442"/>
+          <circle cx="82" cy="48" r="6" fill="#2a3442"/>
+          <rect x="44" y="86" width="180" height="100" rx="8" fill="#0f1a2c" stroke="#2a3442"/>
+          <circle cx="134" cy="136" r="24" fill="#f5b342" opacity="0.9"/>
+          <path d="M127 126l16 10-16 10v-20z" fill="#0b0f17"/>
+          <rect x="240" y="86" width="76" height="14" rx="7" fill="#2a3442"/>
+          <rect x="240" y="110" width="76" height="10" rx="5" fill="#2a3442"/>
+          <rect x="240" y="130" width="56" height="10" rx="5" fill="#2a3442"/>
+          <rect x="240" y="156" width="76" height="28" rx="14" fill="#f5b342" opacity="0.2"/>
+          <rect x="240" y="156" width="76" height="28" rx="14" stroke="#f5b342" stroke-width="1.5"/>
+          <text x="278" y="174" fill="#f5b342" font-size="11" font-weight="700" text-anchor="middle">播放</text>
+          <rect x="44" y="206" width="272" height="8" rx="4" fill="#2a3442"/>
+          <rect x="44" y="206" width="140" height="8" rx="4" fill="#f5b342"/>
+          <circle cx="184" cy="210" r="7" fill="#f5b342" stroke="#0b0f17" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容 -->
+  <div class="container main-layout">
+    <!-- 左栏 -->
+    <aside class="sidebar-left">
+      <div class="sidebar-section">
+        <div class="sidebar-title">频道导航</div>
+        <ul class="channel-list">
+          <li><a href="/#section-popular">热门电影</a></li>
+          <li><a href="/#section-updates">最新剧集</a></li>
+          <li><a href="/#section-categories">纪录片</a></li>
+          <li><a href="/#section-deep">经典修复</a></li>
+          <li><a href="/#section-faq">观影指南</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">类型筛选</div>
+        <div class="filter-tags">
+          <span class="filter-tag">动作</span>
+          <span class="filter-tag">悬疑</span>
+          <span class="filter-tag">爱情</span>
+          <span class="filter-tag">科幻</span>
+          <span class="filter-tag">喜剧</span>
+          <span class="filter-tag">恐怖</span>
+          <span class="filter-tag">剧情</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">热门标签</div>
+        <div class="filter-tags">
+          <span class="filter-tag">高分电影</span>
+          <span class="filter-tag">完结剧集</span>
+          <span class="filter-tag">国语配音</span>
+          <span class="filter-tag">中文字幕</span>
+          <span class="filter-tag">4K修复</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="main-content">
+      <!-- 板块1：内容简介 -->
+      <section class="section" id="section-intro">
+        <div class="section-header">
+          <h2 class="section-title">关于欧乐影院</h2>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px;">欧乐影院是一个面向影视爱好者的在线内容浏览平台，聚合电影、剧集、纪录片与经典老片资源。无论你是在寻找一部适合周末放松的高分电影，还是想追完一部口碑剧集，都可以通过清晰的分类和搜索快速定位。</p>
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px;">平台内容按类型、地区、年份与评分维度组织，方便不同偏好的观众筛选。对于喜欢悬疑短剧的用户，可以关注“悬疑推理”标签；偏好都市情感的观众，则能从“爱情/都市”分类中找到贴近生活的故事。每部内容均配有剧情看点、类型标签与更新状态，帮助你在打开播放前做出选择。</p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">欧乐影院注重浏览效率与阅读舒适度，页面结构清晰，移动端同样便于操作。若你习惯睡前看一集轻松喜剧，或通勤路上追一集短剧，都可以通过收藏与追更功能持续关注内容动态。整体资源以高清为主，部分经典影片提供修复版本，满足不同画质需求。</p>
+      </section>
+
+      <!-- 板块2：热门内容推荐 -->
+      <section class="section" id="section-popular">
+        <div class="section-header">
+          <h2 class="section-title">热门内容推荐</h2>
+          <span class="section-sub">本周高热度影片与剧集</span>
+        </div>
+        <div class="card-grid" id="popularGrid">
+          <div class="media-card">
+            <span class="card-tag">悬疑短剧</span>
+            <div class="card-title">雾港追凶</div>
+            <div class="card-desc">一桩旧案牵出港口小城的秘密，节奏紧凑，适合喜欢推理的观众。</div>
+            <div class="card-meta"><span>⭐ 9.1</span><span>🔥 2.3万</span></div>
+          </div>
+          <div class="media-card">
+            <span class="card-tag">都市情感</span>
+            <div class="card-title">夜班便利店</div>
+            <div class="card-desc">深夜便利店里的相遇与告别，温暖治愈的都市群像故事。</div>
+            <div class="card-meta"><span>⭐ 8.7</span><span>🔥 1.8万</span></div>
+          </div>
+          <div class="media-card">
+            <span class="card-tag">科幻电影</span>
+            <div class="card-title">星际回声</div>
+            <div class="card-desc">太空探索中的信号谜团，视觉与配乐俱佳的硬科幻作品。</div>
+            <div class="card-meta"><span>⭐ 9.3</span><span>🔥 3.1万</span></div>
+          </div>
+          <div class="media-card">
+            <span class="card-tag">经典修复</span>
+            <div class="card-title">重庆森林（4K）</div>
+            <div class="card-desc">王家卫经典之作，4K修复版重现港片黄金时代的都市浪漫。</div>
+            <div class="card-meta"><span>⭐ 9.5</span><span>🔥 4.2万</span></div>
+          </div>
+          <div class="media-card">
+            <span class="card-tag">纪录片</span>
+            <div class="card-title">舌尖上的丝路</div>
+            <div class="card-desc">沿古丝绸之路探寻饮食文化变迁，画面精美，适合全家观看。</div>
+            <div class="card-meta"><span>⭐ 9.0</span><span>🔥 1.5万</span></div>
+          </div>
+          <div class="media-card">
+            <span class="card-tag">喜剧</span>
+            <div class="card-title">合租室友</div>
+            <div class="card-desc">四个性格迥异的年轻人合租日常，轻松下饭，适合通勤观看。</div>
+            <div class="card-meta"><span>⭐ 8.4</span><span>🔥 1.2万</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新 -->
+      <section class="section" id="section-updates">
+        <div class="section-header">
+          <h2 class="section-title">最新更新</h2>
+          <span class="section-sub">近两日新增内容</span>
+        </div>
+        <ul class="update-list">
+          <li class="update-item"><span class="update-name">暗涌2025</span><span class="update-summary">更新至第8集，悬疑线逐步展开</span><span class="update-badge">剧集</span></li>
+          <li class="update-item"><span class="update-name">极地营救</span><span class="update-summary">高清版上线，灾难动作题材</span><span class="update-badge">电影</span></li>
+          <li class="update-item"><span class="update-name">人间烟火</span><span class="update-summary">全12集完结，生活流治愈剧</span><span class="update-badge">剧集</span></li>
+          <li class="update-item"><span class="update-name">深海异兽</span><span class="update-summary">科幻惊悚新片，适合大屏观看</span><span class="update-badge">电影</span></li>
+          <li class="update-item"><span class="update-name">故宫修复师</span><span class="update-summary">纪录片更新第3集，聚焦书画修复</span><span class="update-badge">纪录片</span></li>
+          <li class="update-item"><span class="update-name">爱情公寓外传</span><span class="update-summary">情景喜剧新作，轻松下饭</span><span class="update-badge">剧集</span></li>
+          <li class="update-item"><span class="update-name">无名之辈2</span><span class="update-summary">黑色幽默续作，多线叙事</span><span class="update-badge">电影</span></li>
+          <li class="update-item"><span class="update-name">荒野独行</span><span class="update-summary">生存题材电影，适合喜欢冒险的观众</span><span class="update-badge">电影</span></li>
+        </ul>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section class="section" id="section-categories">
+        <div class="section-header">
+          <h2 class="section-title">按类型浏览</h2>
+          <span class="section-sub">快速定位感兴趣的内容方向</span>
+        </div>
+        <div class="category-grid">
+          <a href="/#section-popular" class="category-item">动作冒险</a>
+          <a href="/#section-popular" class="category-item">悬疑推理</a>
+          <a href="/#section-popular" class="category-item">都市情感</a>
+          <a href="/#section-popular" class="category-item">科幻奇幻</a>
+          <a href="/#section-popular" class="category-item">喜剧轻松</a>
+          <a href="/#section-popular" class="category-item">纪录片</a>
+          <a href="/#section-popular" class="category-item">经典老片</a>
+          <a href="/#section-popular" class="category-item">恐怖惊悚</a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析 -->
+      <section class="section" id="section-deep">
+        <div class="section-header">
+          <h2 class="section-title">深度解析：影视内容的选择与观看</h2>
+        </div>
+        <div class="deep-dive">
+          <h3>如何根据场景选择影片类型</h3>
+          <p>不同的观看场景对内容类型有不同要求。通勤路上时间零碎，适合单集20—30分钟的短剧或情景喜剧；睡前放松则更适合节奏舒缓的纪录片或治愈系电影。欧乐影院的分类与标签体系将这些场景需求纳入考量，你可以通过“喜剧轻松”“都市情感”等标签快速缩小范围。</p>
+          <p>对于家庭观看场景，纪录片与经典修复电影往往是安全选择。例如《舌尖上的丝路》这类美食文化纪录片，画面精美且内容健康，适合与家人共同观看。而独自观看时，悬疑推理类短剧则能提供更强的沉浸感。</p>
+          <h3>悬疑短剧与长剧的节奏差异</h3>
+          <p>悬疑短剧通常采用强情节推进，每集结尾设置钩子，适合连续追看。长剧则更注重人物关系和世界观铺陈，适合有固定空闲时间的观众。在欧乐影院中，短剧通常标注“完结”或“更新至第X集”，长剧则显示更新周期，方便你判断是否值得投入时间。</p>
+          <ul>
+            <li><strong>短剧：</strong>单集30分钟以内，主线紧凑，适合通勤或午休观看。</li>
+            <li><strong>长剧：</strong>单集45—60分钟，人物弧光完整，适合周末集中追看。</li>
+            <li><strong>电影：</strong>90—150分钟独立故事，适合晚上整块时间。</li>
+          </ul>
+          <h3>画质与字幕的取舍</h3>
+          <p>追求画质的观众可以优先选择标注“4K修复”或“高清”的版本，尤其经典老片修复后细节提升明显。若更看重理解剧情，中文字幕的准确度则更为关键。欧乐影院在内容卡片上标注画质与字幕信息，帮助你在打开播放前做出判断。</p>
+          <p>对于外语片，建议优先选择带有“中文字幕”标签的资源；国产剧与港片则可根据个人习惯选择国语配音或原声。部分经典港片同时提供粤语原声与国语配音，满足不同观众的偏好。</p>
+          <h3>更新节奏与追更建议</h3>
+          <p>连载剧集的更新节奏直接影响追更体验。欧乐影院在“最新更新”板块集中展示近期上线的集数，并标注更新状态。如果你不希望等待，可以选择已完结的剧集一次性观看；若享受每周追更的讨论氛围，则关注更新日历中的周更内容。</p>
+        </div>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section class="section" id="section-guide">
+        <div class="section-header">
+          <h2 class="section-title">体验指南</h2>
+          <span class="section-sub">了解页面功能与操作方式</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background: var(--bg-panel); border-radius: var(--radius-md); padding: 18px; border: 1px solid var(--border-soft);">
+            <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 8px;">分类筛选</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">通过左栏类型标签或频道导航，快速定位动作、悬疑、爱情等方向，点击即可跳转对应板块。</p>
+          </div>
+          <div style="background: var(--bg-panel); border-radius: var(--radius-md); padding: 18px; border: 1px solid var(--border-soft);">
+            <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 8px;">搜索查找</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">顶部搜索框支持影片名称与类型关键词查找，输入后点击搜索即可在热门推荐中过滤结果。</p>
+          </div>
+          <div style="background: var(--bg-panel); border-radius: var(--radius-md); padding: 18px; border: 1px solid var(--border-soft);">
+            <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 8px;">移动端适配</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">手机访问时，左侧频道自动转为横向标签，右栏内容置于主内容之后，阅读顺序自然流畅。</p>
+          </div>
+          <div style="background: var(--bg-panel); border-radius: var(--radius-md); padding: 18px; border: 1px solid var(--border-soft);">
+            <h3 style="font-size: 1rem; color: var(--accent); margin-bottom: 8px;">追更与收藏</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">关注“最新更新”板块可了解连载剧集进度，已完结内容会标注“完结”状态，便于安排观看时间。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section class="section" id="section-faq">
+        <div class="section-header">
+          <h2 class="section-title">常见问题</h2>
+          <span class="section-sub">关于影视内容与观看的疑问</span>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>悬疑短剧一般多久更新一次？</summary>
+            <p>悬疑短剧的更新节奏通常为每周2—3集，部分平台采用一次性放出全集的模式。在欧乐影院中，连载短剧会在“最新更新”板块标注集数进度，已完结的则会显示“全X集”。</p>
+          </details>
+          <details>
+            <summary>都市情感类剧集适合什么人看？</summary>
+            <p>都市情感剧集主要面向喜欢现实题材、关注人物关系与生活细节的观众。节奏相对舒缓，适合下班后或周末放松观看，也适合与朋友讨论剧情走向。</p>
+          </details>
+          <details>
+            <summary>经典修复版电影和原版有什么区别？</summary>
+            <p>修复版通常对画面清晰度、色彩和音轨进行数字化处理，适合在大屏设备上观看。剧情与原始版本一致，但视觉体验有明显提升，尤其适合老片爱好者收藏重温。</p>
+          </details>
+          <details>
+            <summary>如何快速找到高分电影？</summary>
+            <p>可以关注热门推荐中的评分信息，评分在8.5分以上的内容通常口碑较好。同时结合类型标签筛选，例如“高分电影”标签会聚合评分较高的影片。</p>
+          </details>
+          <details>
+            <summary>纪录片适合家庭一起看吗？</summary>
+            <p>多数自然、美食与文化类纪录片适合家庭共同观看，内容健康且具有知识性。部分历史题材纪录片可能需要家长根据孩子年龄进行引导。</p>
+          </details>
+          <details>
+            <summary>为什么有些剧集标注“更新中”？</summary>
+            <p>标注“更新中”表示该剧集仍在连载，尚未完结。你可以通过“最新更新”板块查看最新集数，或等待完结后再一次性观看。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section class="section" id="section-comments">
+        <div class="section-header">
+          <h2 class="section-title">观众短评</h2>
+          <span class="section-sub">来自影视爱好者的真实反馈</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item"><div class="comment-user">光影旅人</div><div class="comment-text">《雾港追凶》节奏真的不错，每集结尾都让人想接着看，悬疑短剧爱好者可以冲。</div></div>
+          <div class="comment-item"><div class="comment-user">橙子汽水</div><div class="comment-text">最近在追《夜班便利店》，很温暖，适合睡前看一集，不会太沉重。</div></div>
+          <div class="comment-item"><div class="comment-user">胶片与猫</div><div class="comment-text">4K修复的《重庆森林》画质提升明显，颜色很舒服，老片重看依然有味道。</div></div>
+          <div class="comment-item"><div class="comment-user">午夜场观众</div><div class="comment-text">《星际回声》的配乐太棒了，建议戴耳机看，科幻迷别错过。</div></div>
+          <div class="comment-item"><div class="comment-user">山抹微云</div><div class="comment-text">分类标签挺清楚的，找纪录片很方便，最近在看《舌尖上的丝路》。</div></div>
+          <div class="comment-item"><div class="comment-user">追剧不熬夜</div><div class="comment-text">希望更新日历能再明显一点，有时候容易错过连载剧的新集数。</div></div>
+          <div class="comment-item"><div class="comment-user">南风知我意</div><div class="comment-text">都市情感剧《人间烟火》挺真实的，有些台词写得很生活化。</div></div>
+          <div class="comment-item"><div class="comment-user">深海回响</div><div class="comment-text">恐怖惊悚分类里片子不算多，但选得还行，有几部经典老片。</div></div>
+          <div class="comment-item"><div class="comment-user">一只影迷</div><div class="comment-text">整体浏览体验流畅，手机上看也不乱，适合通勤时刷一刷。</div></div>
+          <div class="comment-item"><div class="comment-user">不散场</div><div class="comment-text">《合租室友》下饭神器，不用动脑，笑点密集。</div></div>
+          <div class="comment-item"><div class="comment-user">蓝色大门</div><div class="comment-text">希望能多上一些欧洲文艺片，现在科幻和悬疑比较多。</div></div>
+          <div class="comment-item"><div class="comment-user">可乐加冰</div><div class="comment-text">搜索功能挺快的，输入片名就能看到相关推荐，省时间。</div></div>
+          <div class="comment-item"><div class="comment-user">夜航星</div><div class="comment-text">纪录片板块质量在线，《故宫修复师》很值得一看。</div></div>
+          <div class="comment-item"><div class="comment-user">雾里看花</div><div class="comment-text">悬疑剧的标签如果能再细分一点就好了，比如社会派和本格派。</div></div>
+          <div class="comment-item"><div class="comment-user">闲人看片</div><div class="comment-text">评分参考价值还可以，目前看过的几部都和预期差不多。</div></div>
+          <div class="comment-item"><div class="comment-user">七日循环</div><div class="comment-text">喜欢这个站点的暗色界面，晚上看不刺眼。</div></div>
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section class="section" id="section-news">
+        <div class="section-header">
+          <h2 class="section-title">影视资讯</h2>
+          <span class="section-sub">近期行业与内容动态</span>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-title">经典港片4K修复计划持续推进，多部作品重映</div>
+            <div class="news-date">2025-03-18</div>
+            <div class="news-summary">影视修复机构近期公布新一批修复片单，涵盖上世纪九十年代多部经典作品，预计下半年陆续上线高清版本。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">悬疑短剧市场升温，平台加大内容投入</div>
+            <div class="news-date">2025-03-15</div>
+            <div class="news-summary">多家制作公司宣布悬疑短剧项目计划，单集时长20—30分钟的内容形态受到通勤观众关注。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">纪录片《舌尖上的丝路》口碑走高，美食题材受关注</div>
+            <div class="news-date">2025-03-12</div>
+            <div class="news-summary">该片以饮食文化为切入点，展现丝绸之路沿线生活风貌，观众评价集中于画面质感与叙事节奏。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">科幻电影《星际回声》配乐原声带上线</div>
+            <div class="news-date">2025-03-10</div>
+            <div class="news-summary">影片原声带收录20首配乐，由交响乐团录制，部分曲目已在音乐平台获得较高播放量。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">都市情感题材创作趋势：更关注普通人生活</div>
+            <div class="news-date">2025-03-08</div>
+            <div class="news-summary">近期多部都市剧将视角放在便利店、合租房等日常场景，以细腻笔触呈现当代青年生活状态。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-title">在线观影用户调研：画质与字幕是选择关键</div>
+            <div class="news-date">2025-03-05</div>
+            <div class="news-summary">最新调研显示，超过六成受访者将画质清晰度与字幕准确性列为选择观看平台的重要因素。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section class="section" id="section-related">
+        <div class="section-header">
+          <h2 class="section-title">相关推荐</h2>
+          <span class="section-sub">按内容方向快速跳转</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#section-popular" class="rec-tag">悬疑短剧推荐</a>
+          <a href="/#section-popular" class="rec-tag">都市情感剧集</a>
+          <a href="/#section-popular" class="rec-tag">高分科幻电影</a>
+          <a href="/#section-popular" class="rec-tag">经典港片修复</a>
+          <a href="/#section-popular" class="rec-tag">美食纪录片</a>
+          <a href="/#section-popular" class="rec-tag">轻松下饭喜剧</a>
+          <a href="/#section-popular" class="rec-tag">完结剧集一次性看</a>
+          <a href="/#section-popular" class="rec-tag">家庭观影纪录片</a>
+        </div>
+      </section>
+
+      <!-- 板块11：精选内容 / 趋势观察 -->
+      <section class="section" id="section-trend">
+        <div class="section-header">
+          <h2 class="section-title">趋势观察</h2>
+          <span class="section-sub">近期观影偏好变化</span>
+        </div>
+        <div style="background: var(--bg-panel); border-radius: var(--radius-lg); padding: 24px 28px; border: 1px solid var(--border-soft);">
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px;">从近期浏览与反馈来看，观众对“短平快”内容的需求持续上升，悬疑短剧与情景喜剧的点击占比明显提高。同时，经典老片修复版本受到怀旧观众青睐，4K画质成为选择观看的重要理由。</p>
+          <p style="color: var(--text-secondary); line-height: 1.8;">纪录片领域，美食与人文题材依然稳健，家庭共同观看场景推动这类内容进入更多用户的视野。欧乐影院在分类与标签设计上，也逐步向这些实际使用场景靠拢。</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="sidebar-right">
+      <div class="sidebar-section">
+        <div class="sidebar-title">页内目录</div>
+        <ul class="toc-list">
+          <li><a href="/#section-intro">关于欧乐影院</a></li>
+          <li><a href="/#section-popular">热门内容推荐</a></li>
+          <li><a href="/#section-updates">最新更新</a></li>
+          <li><a href="/#section-categories">分类入口</a></li>
+          <li><a href="/#section-deep">深度解析</a></li>
+          <li><a href="/#section-faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">热门条目</div>
+        <ul class="hot-list">
+          <li class="hot-item"><span class="hot-rank">01</span><span class="hot-name">雾港追凶 · 悬疑短剧</span></li>
+          <li class="hot-item"><span class="hot-rank">02</span><span class="hot-name">星际回声 · 科幻电影</span></li>
+          <li class="hot-item"><span class="hot-rank">03</span><span class="hot-name">重庆森林4K · 经典修复</span></li>
+          <li class="hot-item"><span class="hot-rank">04</span><span class="hot-name">夜班便利店 · 都市情感</span></li>
+          <li class="hot-item"><span class="hot-rank">05</span><span class="hot-name">舌尖上的丝路 · 纪录片</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">延伸阅读</div>
+        <ul class="toc-list">
+          <li><a href="/#section-deep">悬疑短剧与长剧节奏差异</a></li>
+          <li><a href="/#section-deep">画质与字幕如何取舍</a></li>
+          <li><a href="/#section-guide">移动端观影操作说明</a></li>
+          <li><a href="/#section-news">近期影视修复动态</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-text">欧乐<span style="color:var(--accent)">影院</span></div>
+          <p class="footer-desc">汇集电影、剧集与纪录片资源，提供清晰的分类与流畅的浏览体验，适合不同场景下的影视内容选择。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容频道</h4>
+          <ul>
+            <li><a href="/#section-popular">热门电影</a></li>
+            <li><a href="/#section-updates">最新剧集</a></li>
+            <li><a href="/#section-categories">分类浏览</a></li>
+            <li><a href="/#section-deep">深度解析</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>观众入口</h4>
+          <ul>
+            <li><a href="/#section-guide">体验指南</a></li>
+            <li><a href="/#section-faq">常见问题</a></li>
+            <li><a href="/#section-comments">观众短评</a></li>
+            <li><a href="/#section-news">影视资讯</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>内容方向</h4>
+          <ul>
+            <li><a href="/#section-related">悬疑短剧</a></li>
+            <li><a href="/#section-related">都市情感</a></li>
+            <li><a href="/#section-related">经典修复</a></li>
+            <li><a href="/#section-related">美食纪录片</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 欧乐影院 · 示例页面</span>
+        <span>部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+      const searchInput = document.getElementById('siteSearch');
+      const searchBtn = document.getElementById('searchBtn');
+      const popularGrid = document.getElementById('popularGrid');
+      const initialCards = Array.from(popularGrid.querySelectorAll('.media-card'));
+      const noResultMsg = document.createElement('div');
+      noResultMsg.className = 'no-result-msg';
+      noResultMsg.textContent = '没有找到匹配的内容，请尝试其他关键词。';
+      popularGrid.parentNode.insertBefore(noResultMsg, popularGrid.nextSibling);
+
+      function filterCards() {
+        const keyword = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        initialCards.forEach(card => {
+          const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+          const desc = card.querySelector('.card-desc')?.textContent.toLowerCase() || '';
+          const tags = card.querySelector('.card-tag')?.textContent.toLowerCase() || '';
+
+          if (!keyword || title.includes(keyword) || desc.includes(keyword) || tags.includes(keyword)) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0 && keyword) {
+          noResultMsg.classList.add('visible');
+        } else {
+          noResultMsg.classList.remove('visible');
+        }
+      }
+
+      function resetFilter() {
+        searchInput.value = '';
+        initialCards.forEach(card => card.style.display = '');
+        noResultMsg.classList.remove('visible');
+      }
+
+      searchBtn.addEventListener('click', filterCards);
+      searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+          filterCards();
+        }
+      });
+      searchInput.addEventListener('search', function() {
+        if (searchInput.value === '') resetFilter();
+      });
+    })();
+  </script>
+</body>
+  </html>
