@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑料正能量-反差故事_社会观察_每日更新</title>
+  <meta name="description" content="黑料正能量聚焦网络热门事件背后的暖心反转与真实故事。提供深度观察、人物追踪和正向价值解析，适合喜欢从争议中寻找善意与成长的读者每日阅读。">
+  <meta name="keywords" content="反差故事,社会观察,暖心反转,正能量追踪,事件解析">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b4d3e'/%3E%3Cpath d='M10 22c2-4 5-6 8-6s5 2 6 5' stroke='%23f5c542' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='13' cy='12' r='2.5' fill='%23f5c542'/%3E%3Ccircle cx='21' cy='11' r='2' fill='%23f5c542'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --ink: #1a2e2a;
+      --ink-soft: #2e4a44;
+      --paper: #f7f9f6;
+      --panel: #ffffff;
+      --line: #dde6e2;
+      --muted: #6b7f78;
+      --brand: #1b4d3e;
+      --brand-light: #e6f0eb;
+      --accent: #c47b2d;
+      --accent-soft: #fdf2e3;
+      --gold: #f5c542;
+      --shadow: 0 2px 12px rgba(27, 77, 62, 0.06);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --announce-h: 38px;
+      --header-h: 66px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    img, svg { max-width: 100%; vertical-align: middle; }
+    button { font-family: inherit; cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      background: var(--brand);
+      color: #f0f7f4;
+      font-size: 13px;
+      line-height: var(--announce-h);
+      height: var(--announce-h);
+      overflow: hidden;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      letter-spacing: 0.3px;
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+    .announce-bar .badge {
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .announce-bar .announce-text { overflow: hidden; text-overflow: ellipsis; }
+    .announce-bar a { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 90;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      height: var(--header-h);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: var(--header-h);
+    }
+    .logo-block { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: var(--brand);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 26px; height: 26px; }
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .header-nav a:hover, .header-nav a.active {
+      background: var(--brand-light);
+      color: var(--brand);
+    }
+    .header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 4px 6px 4px 14px;
+      gap: 4px;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 13px;
+      width: 130px;
+      padding: 4px 0;
+      color: var(--ink);
+      font-family: inherit;
+    }
+    .search-box input:focus { outline: none; }
+    .search-box button {
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .search-box button:hover { background: var(--accent); }
+    .search-feedback {
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 4px;
+      text-align: right;
+      min-height: 18px;
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #eef5f1 0%, #fdf8ef 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 36px 0 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--brand);
+      letter-spacing: 2px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--ink-soft);
+      max-width: 560px;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+    .hero-tags span {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 26px;
+      border-radius: 26px;
+      font-weight: 700;
+      font-size: 15px;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+    .btn-outline {
+      background: #fff;
+      color: var(--brand);
+      border: 2px solid var(--brand);
+      padding: 8px 24px;
+      border-radius: 26px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: var(--brand-light); }
+
+    .hero-visual { position: relative; height: 240px; }
+    .hero-visual .floating-card {
+      position: absolute;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(27, 77, 62, 0.12);
+      padding: 14px 16px;
+      font-size: 13px;
+      width: 200px;
+      border-left: 4px solid var(--gold);
+    }
+    .floating-card strong { display: block; font-size: 14px; color: var(--brand); margin-bottom: 4px; }
+    .floating-card small { color: var(--muted); font-size: 11px; }
+    .fc1 { top: 6px; left: 0; transform: rotate(-2deg); }
+    .fc2 { top: 70px; right: 0; transform: rotate(2deg); border-left-color: var(--accent); }
+    .fc3 { bottom: 0; left: 30px; transform: rotate(-1deg); border-left-color: #5c9e7a; }
+
+    /* 三栏布局 */
+    .layout-main {
+      display: grid;
+      grid-template-columns: 178px minmax(0,1fr) 248px;
+      gap: 28px;
+      padding: 32px 0 40px;
+      align-items: start;
+    }
+    .col-left { position: sticky; top: calc(var(--announce-h) + var(--header-h) + 16px); }
+    .col-right { position: sticky; top: calc(var(--announce-h) + var(--header-h) + 16px); }
+    .col-center { min-width: 0; }
+
+    /* 左栏 */
+    .side-block {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .side-block h3 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .channel-list { list-style: none; }
+    .channel-list li { margin-bottom: 2px; }
+    .channel-list a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+    .channel-list a:hover { background: var(--brand-light); color: var(--brand); }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud a {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 3px 10px;
+      font-size: 12px;
+      color: var(--ink-soft);
+      transition: background 0.15s;
+    }
+    .tag-cloud a:hover { background: var(--brand-light); border-color: var(--brand); }
+
+    /* 中栏板块通用 */
+    .section-block {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: calc(var(--announce-h) + var(--header-h) + 16px);
+    }
+    .section-block h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--brand);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* 简介 */
+    .intro-text { font-size: 15px; line-height: 1.85; color: var(--ink-soft); }
+    .intro-text p { margin-bottom: 10px; }
+    .intro-text strong { color: var(--brand); }
+
+    /* 热门卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 14px 15px;
+      transition: box-shadow 0.2s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover { box-shadow: 0 4px 16px rgba(27,77,62,0.1); transform: translateY(-2px); }
+    .card-type {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 8px;
+      border-radius: 10px;
+      margin-bottom: 6px;
+      align-self: flex-start;
+    }
+    .content-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.4; }
+    .card-desc { font-size: 12.5px; color: var(--muted); flex: 1; line-height: 1.6; margin-bottom: 8px; }
+    .card-meta { font-size: 11px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+    .card-meta span { background: #fff; border: 1px solid var(--line); padding: 1px 7px; border-radius: 8px; }
+
+    /* 最新更新列表 */
+    .update-list { list-style: none; }
+    .update-list li {
+      display: flex;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px dashed var(--line);
+      align-items: baseline;
+      font-size: 14px;
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .ul-name { font-weight: 600; color: var(--ink); min-width: 130px; flex-shrink: 0; }
+    .update-list .ul-summary { color: var(--muted); font-size: 13px; }
+
+    /* 分类入口 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .cat-item {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 14px 14px 12px;
+      transition: border-color 0.2s, background 0.2s;
+      display: block;
+    }
+    .cat-item:hover { border-color: var(--brand); background: var(--brand-light); }
+    .cat-item strong { display: block; font-size: 14.5px; color: var(--brand); margin-bottom: 4px; }
+    .cat-item span { font-size: 12px; color: var(--muted); }
+
+    /* 深度解析 */
+    .deep-article h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 20px 0 8px;
+      padding-left: 10px;
+      border-left: 3px solid var(--gold);
+    }
+    .deep-article p { margin-bottom: 12px; line-height: 1.85; color: var(--ink-soft); font-size: 15px; }
+    .deep-article ul { margin: 8px 0 14px 20px; }
+    .deep-article li { margin-bottom: 5px; line-height: 1.7; color: var(--ink-soft); }
+
+    /* FAQ */
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.15s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 18px; color: var(--brand); font-weight: 400; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item summary:hover { background: var(--brand-light); }
+    .faq-item .faq-answer { padding: 0 16px 14px; font-size: 14px; color: var(--muted); line-height: 1.8; border-top: 1px solid var(--line); padding-top: 12px; }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+    .comment-item { background: var(--paper); border-radius: var(--radius-sm); padding: 10px 14px; border: 1px solid var(--line); }
+    .comment-user { font-size: 12.5px; font-weight: 700; color: var(--brand); margin-bottom: 3px; }
+    .comment-text { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+
+    /* 相关资讯 */
+    .news-list { list-style: none; }
+    .news-list li { padding: 10px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+    .news-list li:last-child { border-bottom: none; }
+    .news-date { font-size: 12px; color: var(--muted); min-width: 78px; }
+    .news-content strong { font-size: 14.5px; color: var(--ink); }
+    .news-content p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* 相关推荐标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .rec-tags a:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+    /* 右栏 */
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 3px; }
+    .toc-list a { font-size: 13px; color: var(--ink-soft); display: block; padding: 3px 8px; border-radius: 6px; }
+    .toc-list a:hover { background: var(--brand-light); color: var(--brand); }
+    .hot-list { list-style: none; counter-reset: hot; }
+    .hot-list li { counter-increment: hot; display: flex; gap: 8px; padding: 6px 0; font-size: 13px; color: var(--ink-soft); align-items: baseline; border-bottom: 1px dashed transparent; }
+    .hot-list li::before { content: counter(hot); font-weight: 800; color: var(--accent); font-size: 12px; min-width: 16px; }
+    .hot-list a { color: var(--ink-soft); }
+    .hot-list a:hover { color: var(--brand); }
+    .extend-links { list-style: none; }
+    .extend-links li { padding: 5px 0; font-size: 13px; }
+    .extend-links a { color: var(--ink-soft); }
+    .extend-links a:hover { color: var(--brand); }
+    .extend-links li::before { content: "›"; color: var(--gold); margin-right: 6px; font-weight: 700; }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--brand);
+      color: #d6e6df;
+      padding: 36px 0 20px;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 28px; margin-bottom: 24px; }
+    .footer-brand .logo-text { color: #fff; font-size: 22px; margin-bottom: 8px; display: block; }
+    .footer-brand p { color: #aecfc0; font-size: 13px; line-height: 1.7; max-width: 320px; }
+    .footer-col h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+    .footer-col a { display: block; color: #b8d6c8; padding: 3px 0; font-size: 13px; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; color: #93b5a5; }
+    .footer-note { font-size: 11.5px; color: #8aa99b; margin-top: 10px; }
+
+    /* 移动端菜单 */
+    .mobile-menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 18px; color: var(--brand); }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .layout-main { grid-template-columns: 1fr; gap: 0; }
+      .col-left, .col-right { position: static; display: none; }
+      .col-left.mobile-open, .col-right.mobile-open { display: block; margin-bottom: 18px; }
+      .hero .container { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 32px; }
+      .card-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+      .comment-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .mobile-menu-btn { display: inline-block; }
+      .header-nav { display: none; }
+      .header-nav.mobile-open { display: flex; position: absolute; top: var(--header-h); left: 0; right: 0; background: var(--panel); flex-direction: column; padding: 12px 24px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); z-index: 80; gap: 2px; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 14px; }
+      .hero { padding: 24px 0; }
+      .hero h1 { font-size: 28px; letter-spacing: 1px; }
+      .hero-desc { font-size: 14px; }
+      .section-block { padding: 16px 14px; }
+      .section-block h2 { font-size: 18px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .update-list li { flex-direction: column; gap: 2px; }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .search-box input { width: 80px; }
+      .header-actions .search-box { display: none; }
+      .header-actions .search-box.mobile-open { display: flex; position: absolute; top: var(--header-h); right: 14px; background: #fff; z-index: 85; box-shadow: var(--shadow); border: 1px solid var(--line); }
+      .comment-grid { grid-template-columns: 1fr; }
+      .news-list li { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" id="top">
+  <div class="container">
+    <span class="badge">今日上新</span>
+    <span class="announce-text">“外卖小哥救人后默默离开”完整追踪 · <a href="/#deep-analysis">查看深度解析</a></span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo-block">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 22c2.5-4 5.5-6 8.5-6s5.5 2 7 5" stroke="#f5c542" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="13" cy="11.5" r="3" fill="#f5c542"/>
+          <circle cx="21" cy="10.5" r="2.4" fill="#f5c542"/>
+          <circle cx="26" cy="16" r="1.6" fill="#f5c542" opacity="0.7"/>
+        </svg>
+      </div>
+      <span class="logo-text">黑料正能量</span>
+    </div>
+    <nav class="header-nav" id="headerNav">
+      <a href="/#intro" class="active">简介</a>
+      <a href="/#hot-recommend">热门推荐</a>
+      <a href="/#latest-update">最新更新</a>
+      <a href="/#categories">分类</a>
+      <a href="/#deep-analysis">深度解析</a>
+      <a href="/#experience-guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">读者评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#related-recommend">相关推荐</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box" id="searchBox">
+        <input type="text" id="searchInput" placeholder="搜索内容..." aria-label="搜索页面内容">
+        <button id="searchBtn">搜索</button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">☰</button>
+    </div>
+  </div>
+  <div class="search-feedback container" id="searchFeedback" aria-live="polite"></div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">反差故事 · 社会观察 · 每日精选</span>
+      <h1>黑料正能量</h1>
+      <p class="hero-desc">从争议事件中挖掘暖心反转，追踪普通人身上的闪光选择。我们关注那些在被误解、被标签、被围观之后，依然选择善良与担当的真实故事——每天更新，带你看清事件全貌，也看见人心底处的光。</p>
+      <div class="hero-tags">
+        <span>暖心反转</span>
+        <span>事件追踪</span>
+        <span>人物回访</span>
+        <span>正向解读</span>
+        <span>争议背后</span>
+      </div>
+      <div class="hero-cta">
+        <a href="/#hot-recommend" class="btn-primary">浏览热门故事</a>
+        <a href="/#deep-analysis" class="btn-outline">读深度解析</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="floating-card fc1">
+        <strong>暴雨中的逆行者</strong>
+        <small>外卖骑手连救三人 · 阅读 2.8w</small>
+      </div>
+      <div class="floating-card fc2">
+        <strong>被误解的“熊孩子”</strong>
+        <small>监控还原真相 · 阅读 3.5w</small>
+      </div>
+      <div class="floating-card fc3">
+        <strong>夜市摊主的十年之约</strong>
+        <small>为环卫工留一盏灯 · 阅读 1.9w</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主内容区 -->
+<div class="container">
+  <div class="layout-main">
+
+    <!-- 左栏：频道导航 + 标签索引 -->
+    <aside class="col-left" id="colLeft">
+      <div class="side-block">
+        <h3>频道导航</h3>
+        <ul class="channel-list">
+          <li><a href="/#intro">平台简介</a></li>
+          <li><a href="/#hot-recommend">热门内容推荐</a></li>
+          <li><a href="/#latest-update">最新更新动态</a></li>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#deep-analysis">深度解析</a></li>
+          <li><a href="/#experience-guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related-recommend">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-block">
+        <h3>热门标签</h3>
+        <div class="tag-cloud">
+          <a href="/#hot-recommend">暖心反转</a>
+          <a href="/#hot-recommend">社会观察</a>
+          <a href="/#deep-analysis">事件追踪</a>
+          <a href="/#news">人物回访</a>
+          <a href="/#related-recommend">争议背后</a>
+          <a href="/#deep-analysis">正向解读</a>
+          <a href="/#categories">普通人故事</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="col-center" id="colCenter">
+
+      <!-- 1. 内容简介 -->
+      <section class="section-block" id="intro">
+        <h2>关于黑料正能量</h2>
+        <div class="intro-text">
+          <p><strong>黑料正能量</strong>是一个专注于“争议事件背后的暖心真相”的内容频道。我们不追逐纯粹的负面爆料，而是把目光投向那些被贴上“黑料”标签、却在后续发展中展现出人性闪光点的人和事。从社会热点到社区小事，从网络热议到街头巷尾，我们试图用完整的视角还原事件经过，让那些被误解、被忽略的善意被更多人看见。</p>
+          <p>如果你喜欢看<strong>反差故事</strong>，对<strong>社会观察</strong>类内容有持续兴趣，或者习惯在通勤路上刷几篇<strong>暖心反转</strong>的短文，这个频道会适合你。我们每天更新3—6条精选内容，涵盖<strong>事件追踪</strong>、<strong>人物回访</strong>、<strong>正向解读</strong>等方向，每条内容都尽量给出具体的时间、地点和人物，帮助读者建立自己的判断。</p>
+          <p>频道内容按类型分为“暖心反转”“社会观察”“人物回访”“争议背后”“正向解读”五个大类，你可以通过分类入口快速筛选自己感兴趣的方向。我们也整理了常见问题、读者评论和相关资讯，方便你从不同角度了解一个事件的来龙去脉。对于想深入阅读的读者，<strong>深度解析</strong>栏目会提供更完整的背景梳理和多方观点对照。</p>
+          <p>我们相信，一个事件的全貌往往比第一眼看到的更复杂，也更值得耐心了解。无论是“外卖小哥救人后默默离开”，还是“被误解的熊孩子监控还原真相”，每一条内容都经过编辑筛选和要点提炼。你可以按分类浏览，也可以使用页面顶部的搜索框查找特定关键词。频道内容每日更新，部分深度内容会在周末汇总整理，方便集中阅读。</p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="section-block" id="hot-recommend">
+        <h2>热门内容推荐</h2>
+        <p class="section-sub">近7天读者阅读量较高的反差故事与事件追踪</p>
+        <div class="card-grid">
+          <article class="content-card">
+            <span class="card-type">暖心反转</span>
+            <h4>外卖小哥救人后默默离开，全城寻人三天</h4>
+            <p class="card-desc">暴雨中连救三人后骑车送完最后一单，他说“只是顺手的事”。追踪后续：平台奖励、社区表彰与本人回应。</p>
+            <div class="card-meta"><span>阅读 2.8w</span><span>评分 9.2</span><span>昨日更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">社会观察</span>
+            <h4>被误解的“熊孩子”：监控还原电梯里的三分钟</h4>
+            <p class="card-desc">一段掐头去尾的视频引发全网批评，完整监控显示孩子是在帮老人捡拾散落的药盒。家属首次发声。</p>
+            <div class="card-meta"><span>阅读 3.5w</span><span>评分 9.5</span><span>2天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">人物回访</span>
+            <h4>夜市摊主的十年之约：每晚为环卫工留一盏灯</h4>
+            <p class="card-desc">从一张免费吃面的纸条开始，这个夜市摊位坚持了十年。回访摊主老陈和三位常客，聊聊坚持背后的理由。</p>
+            <div class="card-meta"><span>阅读 1.9w</span><span>评分 9.0</span><span>3天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">争议背后</span>
+            <h4>“最凶班主任”走红之后：学生联名写信挽留</h4>
+            <p class="card-desc">因严厉管教被拍下传上网，评论区一度充满质疑。一周后学生家长联名感谢，还原严格背后的负责与陪伴。</p>
+            <div class="card-meta"><span>阅读 2.2w</span><span>评分 8.8</span><span>4天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">正向解读</span>
+            <h4>菜市场“无人收银”摊位：三年没丢过一分钱</h4>
+            <p class="card-desc">摊主因手术住院，顾客自助扫码付款找零。监控记录下的诚信往来，成为社区信任的生动样本。</p>
+            <div class="card-meta"><span>阅读 1.6w</span><span>评分 9.3</span><span>5天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">暖心反转</span>
+            <h4>公交司机“拒载”老人被投诉，真相公布后获赞</h4>
+            <p class="card-desc">司机发现老人坐错方向且听力不便，坚持联系家属并自费打车送回家。投诉工单最终变成表扬信。</p>
+            <div class="card-meta"><span>阅读 2.5w</span><span>评分 9.1</span><span>6天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">社会观察</span>
+            <h4>小区“共享工具角”走红：一把电钻的邻里漂流记</h4>
+            <p class="card-desc">从一把电钻开始，居民自发捐出闲置工具，贴上编号和借用登记本。半年流转300多次，零损坏。</p>
+            <div class="card-meta"><span>阅读 1.4w</span><span>评分 8.7</span><span>6天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">人物回访</span>
+            <h4>那个在废墟上读书的女孩，一年后怎么样了</h4>
+            <p class="card-desc">去年地震后坐在临时安置点看书的照片感动全网。回访得知她已复课，成绩稳定，还加入了学校广播站。</p>
+            <div class="card-meta"><span>阅读 2.0w</span><span>评分 9.4</span><span>7天前更新</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section-block" id="latest-update">
+        <h2>最新更新动态</h2>
+        <p class="section-sub">每日追踪事件后续与读者关心的进展</p>
+        <ul class="update-list">
+          <li><span class="ul-name">“救人骑手”获表彰</span><span class="ul-summary">平台授予“先锋骑手”称号并发放奖金，本人表示将部分捐给社区养老食堂。</span></li>
+          <li><span class="ul-name">电梯事件完整监控</span><span class="ul-summary">物业公开三分钟完整视频，孩子家长与老人家属已当面沟通，双方均表示理解。</span></li>
+          <li><span class="ul-name">夜市“留灯摊”十周年</span><span class="ul-summary">老陈的摊位迎来十周年，社区协助搭建了固定的“暖心驿站”，继续为环卫工提供热水。</span></li>
+          <li><span class="ul-name">“严师”班级毕业照</span><span class="ul-summary">曾被质疑的班主任所带班级高考成绩优异，学生联名写信：“谢谢您没有放弃我们。”</span></li>
+          <li><span class="ul-name">无人收银摊恢复营业</span><span class="ul-summary">摊主康复后重新出摊，表示将继续保留自助收银方式，并新增了手写感谢墙。</span></li>
+          <li><span class="ul-name">公交司机获“委屈奖”</span><span class="ul-summary">公交公司为司机颁发“优质服务奖”，并组织经验分享会，鼓励员工耐心处理乘客困难。</span></li>
+          <li><span class="ul-name">共享工具角升级</span><span class="ul-summary">社区为工具角加装了防雨棚和登记二维码，居民可扫码查看借用状态，流转效率提升。</span></li>
+          <li><span class="ul-name">“废墟女孩”回访视频</span><span class="ul-summary">新学期开始，她通过学校广播站分享自己的阅读书单，鼓励同学珍惜日常学习时光。</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section-block" id="categories">
+        <h2>内容分类入口</h2>
+        <p class="section-sub">按你感兴趣的方向筛选内容</p>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#hot-recommend"><strong>暖心反转</strong><span>被误解后的真相还原</span></a>
+          <a class="cat-item" href="/#hot-recommend"><strong>社会观察</strong><span>社区里的小制度与信任</span></a>
+          <a class="cat-item" href="/#hot-recommend"><strong>人物回访</strong><span>热点人物后来的故事</span></a>
+          <a class="cat-item" href="/#hot-recommend"><strong>争议背后</strong><span>争议事件的多方视角</span></a>
+          <a class="cat-item" href="/#hot-recommend"><strong>正向解读</strong><span>从细节看善意与责任</span></a>
+          <a class="cat-item" href="/#latest-update"><strong>每日动态</strong><span>事件后续及时更新</span></a>
+          <a class="cat-item" href="/#news"><strong>资讯速览</strong><span>相关报道与官方回应</span></a>
+          <a class="cat-item" href="/#experience-guide"><strong>阅读指南</strong><span>如何使用频道与筛选</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section class="section-block" id="deep-analysis">
+        <h2>深度解析：当“黑料”标签遇见完整真相</h2>
+        <div class="deep-article">
+          <p>在信息碎片化的传播环境里，一个事件最初被看见的方式，往往决定了它会被贴上什么标签。一段十几秒的视频、一张截取的图片、一句脱离上下文的转述，都可能在短时间内形成强烈的情绪判断。而<strong>黑料正能量</strong>关注的，正是这些标签背后那些容易被忽略的完整过程——当事人做了什么、为什么这样做、后续又发生了什么。</p>
+
+          <h3>一、为什么“第一眼印象”常常不完整</h3>
+          <p>以“电梯里的熊孩子”事件为例：最初流传的视频只记录了孩子按亮所有楼层按钮的画面，配文是“家长不管”。评论区迅速分成两派，一方批评孩子缺乏管教，一方指责家长失职。但完整监控显示，孩子是在帮一位老人捡拾散落一地的药盒，按楼层是为了让老人有足够时间走出电梯。这个细节没有被剪进第一段视频，却彻底改变了事件的性质。</p>
+          <p>类似的情况在“最凶班主任”事件中同样出现。一段课堂上严厉批评学生的录音被单独传播，引发了对教师方式的质疑。但学生和家长后续的反馈显示，这位老师长期利用休息时间为基础薄弱的学生补课，严厉的对象是多次违反课堂纪律且拒绝沟通的学生。标签与事实之间，往往隔着大量未被呈现的上下文。</p>
+
+          <h3>二、追踪一个事件，需要看哪些要素</h3>
+          <p>在整理每一条内容时，我们会尽量呈现以下要素，帮助读者形成自己的判断：</p>
+          <ul>
+            <li><strong>时间线</strong>：事件从发生到发酵经过了哪些关键节点，每个节点有哪些新信息出现。</li>
+            <li><strong>多方说法</strong>：当事人、目击者、管理方、家属等不同角度的陈述，尽量保留原话。</li>
+            <li><strong>可验证的细节</strong>：监控片段、聊天记录、票据、官方通报等可以被交叉核对的信息。</li>
+            <li><strong>后续进展</strong>：事件处理结果、当事人的现状、社区或机构是否做出调整。</li>
+          </ul>
+          <p>这些要素并不追求“反转”本身，而是尽量还原一个事件的多面性。有时候后续发展并没有戏剧性的反转，但当事人的坚持、社区的回应、制度的微调，同样构成了值得被看见的正向价值。</p>
+
+          <h3>三、从“围观”到“理解”：正向解读的尺度</h3>
+          <p>正向解读不等于强行歌颂。在<strong>黑料正能量</strong>的内容框架里，我们更倾向于描述具体的行为和选择，而不是给人物贴上“好人”或“坏人”的标签。比如外卖骑手救人后继续送单，他说“只是顺手的事”——这个细节比任何赞美都更有说服力。夜市摊主为环卫工留灯十年，最初只是觉得“他们凌晨扫街太冷”，这个朴素的理由本身就足够动人。</p>
+          <p>对于争议事件，我们也会保留不同角度的声音。在“严师”事件的讨论中，有家长支持严格管理，也有教育工作者提出方式可以更温和。这些讨论本身是有价值的，它让读者看到：同一个行为，在不同立场下可能有不同的理解，而完整的信息是理性讨论的前提。</p>
+
+          <h3>四、读者可以怎样参与内容共建</h3>
+          <p>频道内容主要来自公开报道、社区线索和读者推荐。如果你身边有类似“被误解后真相大白”的故事，或者注意到某个热点事件出现了值得关注的后续，可以通过页面底部的示例联系方式（演示用）提供线索。我们会优先关注那些有具体细节、可核实信息、且后续进展明确的内容方向。对于已经广泛传播的事件，我们更关注“后来怎么样了”，而不是重复最初的争议片段。</p>
+          <p>阅读时，你可以结合分类筛选和页面搜索，快速定位自己感兴趣的方向。深度解析栏目适合集中阅读，热门推荐和最新更新适合日常浏览。无论从哪个入口进入，我们都希望你能看到比第一眼更完整的图景。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section-block" id="experience-guide">
+        <h2>阅读与使用指南</h2>
+        <p class="section-sub">快速了解页面功能与内容获取方式</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">分类筛选</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">通过“内容分类入口”或左侧频道导航，按暖心反转、社会观察、人物回访等方向快速筛选。每个分类对应不同的内容组织逻辑，适合有明确阅读偏好的读者。</p>
+          </div>
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">页面搜索</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">顶部搜索框支持在页面可见文本中查找关键词，输入“外卖”“夜市”“公交”等词即可定位相关内容。无匹配结果时会给出提示，方便你调整关键词。</p>
+          </div>
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">移动端适配</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">手机访问时，左侧导航和右侧辅助栏会收起，点击页头菜单按钮可展开频道导航。正文按单列排列，卡片和列表自适应屏幕宽度，方便通勤或碎片时间阅读。</p>
+          </div>
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">深度阅读与延伸</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">“深度解析”适合集中了解事件背景和多方观点，右栏“热门条目”和“延伸阅读”提供更多入口。部分内容末尾会关联相关资讯和推荐标签，方便从一个事件扩展到同类话题。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section-block" id="faq">
+        <h2>常见问答</h2>
+        <p class="section-sub">围绕关键词与内容消费的高频问题</p>
+        <details class="faq-item" open>
+          <summary>黑料正能量主要关注什么类型的内容？</summary>
+          <div class="faq-answer">主要关注争议事件中被忽略的完整真相和后续暖心进展。内容类型包括暖心反转、社会观察、人物回访、争议背后和正向解读，适合喜欢从多角度了解事件全貌的读者。</div>
+        </details>
+        <details class="faq-item">
+          <summary>“反差故事”适合什么人看？</summary>
+          <div class="faq-answer">适合对社会新闻、社区故事、人物命运感兴趣的读者，尤其是那些不满足于碎片化信息、希望看到事件完整脉络和后续发展的人。通勤、睡前或周末集中阅读都比较合适。</div>
+        </details>
+        <details class="faq-item">
+          <summary>内容一般多久更新一次？</summary>
+          <div class="faq-answer">频道保持每日更新，通常每天新增3—6条短内容，深度解析和人物回访类长内容每周会有一到两篇汇总。具体更新节奏以页面“最新更新动态”栏目为准。</div>
+        </details>
+        <details class="faq-item">
+          <summary>和普通新闻资讯相比，这里的“正向解读”有什么不同？</summary>
+          <div class="faq-answer">普通资讯往往聚焦事件本身和即时结果，我们更侧重“后来怎么样了”以及事件中具体的人做了什么选择。正向解读不是强行赞美，而是通过可核实的细节呈现善意和责任的真实存在。</div>
+        </details>
+        <details class="faq-item">
+          <summary>如何找到某个特定事件的最新进展？</summary>
+          <div class="faq-answer">可以使用页面顶部的搜索框输入事件关键词，或查看“最新更新动态”和“相关资讯”栏目。部分事件会在“深度解析”中做完整梳理，方便按时间线了解来龙去脉。</div>
+        </details>
+        <details class="faq-item">
+          <summary>网站内容是否全部基于真实事件？</summary>
+          <div class="faq-answer">页面中的内容名称、数据、评论均为示例内容，用于展示频道结构和阅读方式。实际内容会以公开报道和可核实信息为基础，并标注来源类型，方便读者自行判断。</div>
+        </details>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section-block" id="comments">
+        <h2>读者评论</h2>
+        <p class="section-sub">来自示例读者的多元反馈</p>
+        <div class="comment-grid">
+          <div class="comment-item"><div class="comment-user">山间清风</div><div class="comment-text">“电梯里熊孩子”那篇看得我挺感慨的，第一眼确实容易误会，完整监控出来之后评论区安静了很多。</div></div>
+          <div class="comment-item"><div class="comment-user">晚风不急</div><div class="comment-text">每天通勤刷两篇，篇幅刚好。喜欢“后来怎么样了”这个角度，比单纯追热点有收获。</div></div>
+          <div class="comment-item"><div class="comment-user">小城故事多</div><div class="comment-text">夜市摊主十年留灯那篇很打动我，文字不煽情，细节很具体，看完想去那个夜市看看。</div></div>
+          <div class="comment-item"><div class="comment-user">青柠汽水</div><div class="comment-text">分类挺清楚的，想找暖心反转直接点进去就行，不用翻来翻去。希望多更新人物回访类。</div></div>
+          <div class="comment-item"><div class="comment-user">老张看社会</div><div class="comment-text">“严师”那篇写得比较客观，没有一边倒。学生联名信这个后续确实没想到，值得一读。</div></div>
+          <div class="comment-item"><div class="comment-user">一只小满</div><div class="comment-text">页面在手机上看着挺舒服的，字大小合适，卡片直接点进去也没有乱七八糟的弹窗。</div></div>
+          <div class="comment-item"><div class="comment-user">北岸听风</div><div class="comment-text">深度解析那块内容比较扎实，把时间线和各方说法都列出来了，适合我这种喜欢看完整经过的人。</div></div>
+          <div class="comment-item"><div class="comment-user">大白话生活</div><div class="comment-text">“无人收银摊”那个故事短小但后劲大，三年没丢钱这个细节比什么大道理都管用。</div></div>
+          <div class="comment-item"><div class="comment-user">周末不加班</div><div class="comment-text">搜索功能试了下，搜“外卖”能定位到相关条目，反馈挺快的。希望以后能按日期筛选。</div></div>
+          <div class="comment-item"><div class="comment-user">半盏清茶</div><div class="comment-text">有些内容偏短，看完有点意犹未尽，不过正好可以去深度解析里补全背景。整体节奏可以接受。</div></div>
+          <div class="comment-item"><div class="comment-user">路过的猫</div><div class="comment-text">评论区的语气比较平和，没有吵架的，这点对阅读体验来说很加分。</div></div>
+          <div class="comment-item"><div class="comment-user">城南旧事</div><div class="comment-text">公交司机那件事我经历过类似的，当时也被误解，后来乘客专门打电话到公司解释。看到这篇很有共鸣。</div></div>
+          <div class="comment-item"><div class="comment-user">慢慢来呀</div><div class="comment-text">频道名字叫黑料正能量，一开始以为是在反讽，看完简介才明白是关注黑料标签背后的正面故事，角度挺特别。</div></div>
+          <div class="comment-item"><div class="comment-user">风吹麦浪</div><div class="comment-text">更新频率可以，每天都有新内容，偶尔有长文。希望周末的汇总能再丰富一点。</div></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section-block" id="news">
+        <h2>相关资讯</h2>
+        <p class="section-sub">与频道主题相关的报道与进展</p>
+        <ul class="news-list">
+          <li><span class="news-date">2025-03-18</span><div class="news-content"><strong>社区“共享工具角”模式被多地借鉴</strong><p>从一把电钻开始的邻里互信实验，近日在多个社区推广，登记和消毒流程进一步规范。</p></div></li>
+          <li><span class="news-date">2025-03-15</span><div class="news-content"><strong>外卖平台设立“暖心骑手”专项奖励</strong><p>针对骑手在配送途中救助他人、参与社区服务等行为，平台将给予额外表彰与保障支持。</p></div></li>
+          <li><span class="news-date">2025-03-12</span><div class="news-content"><strong>“留灯摊”所在街道增设环卫工休息点</strong><p>街道办与周边商户合作，在夜市附近设置两处固定休息点，提供热水和座椅。</p></div></li>
+          <li><span class="news-date">2025-03-09</span><div class="news-content"><strong>中小学开展“完整看事件”媒介素养课</strong><p>部分学校将信息核实、多角度阅读纳入班会主题，引导学生不轻信片段化视频。</p></div></li>
+          <li><span class="news-date">2025-03-05</span><div class="news-content"><strong>公交系统推广“耐心服务”案例培训</strong><p>多家公交公司整理司乘沟通典型案例，用于新员工培训，强调先了解情况再处理投诉。</p></div></li>
+          <li><span class="news-date">2025-03-01</span><div class="news-content"><strong>社区自助收银模式获诚信建设奖项</strong><p>“无人收银摊”所在社区获评年度诚信建设示范点，计划将经验扩展到更多便民场景。</p></div></li>
+        </ul>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section-block" id="related-recommend">
+        <h2>相关推荐</h2>
+        <p class="section-sub">按内容方向词继续探索</p>
+        <div class="rec-tags">
+          <a href="/#hot-recommend">暖心反转故事合集</a>
+          <a href="/#hot-recommend">社会观察：社区信任实验</a>
+          <a href="/#hot-recommend">人物回访：热点之后</a>
+          <a href="/#deep-analysis">争议事件完整时间线</a>
+          <a href="/#deep-analysis">正向解读的写作方法</a>
+          <a href="/#news">最新事件进展速览</a>
+          <a href="/#experience-guide">通勤阅读指南</a>
+        </div>
+      </section>
+
+      <!-- 11. 趋势观察 -->
+      <section class="section-block" id="trend-observe">
+        <h2>趋势观察：从围观到求证的内容消费变化</h2>
+        <p class="section-sub">近期读者行为和内容偏好的小观察</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">读者更关注“后续进展”</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">从页面阅读数据看，包含明确后续时间点的内容停留时间更长。读者不仅想知道发生了什么，更想了解当事人现状和事件带来的实际改变。</p>
+          </div>
+          <div style="background:var(--paper);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--line);">
+            <h3 style="font-size:15px;color:var(--brand);margin-bottom:6px;">短内容与深度内容交替消费</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.7;">卡片式短内容适合快速浏览，深度解析适合集中阅读。两者结合的模式让读者可以根据时间和场景灵活选择，也提高了对频道的持续回访意愿。</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="col-right" id="colRight">
+      <div class="side-block">
+        <h3>页内目录</h3>
+        <ul class="toc-list">
+          <li><a href="/#intro">关于黑料正能量</a></li>
+          <li><a href="/#hot-recommend">热门内容推荐</a></li>
+          <li><a href="/#latest-update">最新更新动态</a></li>
+          <li><a href="/#categories">内容分类入口</a></li>
+          <li><a href="/#deep-analysis">深度解析</a></li>
+          <li><a href="/#experience-guide">阅读与使用指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related-recommend">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-block">
+        <h3>热门条目</h3>
+        <ol class="hot-list">
+          <li><a href="/#hot-recommend">被误解的“熊孩子”监控还原</a></li>
+          <li><a href="/#hot-recommend">外卖小哥救人后默默离开</a></li>
+          <li><a href="/#hot-recommend">公交司机“拒载”老人真相</a></li>
+          <li><a href="/#hot-recommend">“最凶班主任”学生联名挽留</a></li>
+          <li><a href="/#hot-recommend">夜市摊主十年留灯之约</a></li>
+        </ol>
+      </div>
+      <div class="side-block">
+        <h3>延伸阅读</h3>
+        <ul class="extend-links">
+          <li><a href="/#deep-analysis">如何辨别片段化信息</a></li>
+          <li><a href="/#deep-analysis">正向解读的尺度与边界</a></li>
+          <li><a href="/#experience-guide">通勤路上的阅读选择</a></li>
+          <li><a href="/#news">本周事件进展汇总</a></li>
+          <li><a href="/#trend-observe">从围观到求证的阅读趋势</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">黑料正能量</span>
+        <p>关注争议事件背后的暖心反转与完整真相。每天更新反差故事、社会观察和人物回访，陪你从更多角度理解事件与人心。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <a href="/#hot-recommend">暖心反转</a>
+        <a href="/#hot-recommend">社会观察</a>
+        <a href="/#hot-recommend">人物回访</a>
+        <a href="/#hot-recommend">争议背后</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读入口</h4>
+        <a href="/#intro">平台简介</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#experience-guide">使用指南</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动与动态</h4>
+        <a href="/#comments">读者评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#latest-update">最新更新</a>
+        <a href="/#related-recommend">相关推荐</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 黑料正能量 · 内容仅为示例展示</span>
+      <span>关注反差故事 · 看见完整真相</span>
+    </div>
+    <p class="footer-note">部分内容为示例数据，仅用于展示页面结构</p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    // 搜索功能
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchFeedback = document.getElementById('searchFeedback');
+
+    function doSearch() {
+      const q = searchInput.value.trim();
+      if (!q) {
+        searchFeedback.textContent = '请输入搜索关键词';
+        return;
+      }
+      // 移除旧高亮
+      document.querySelectorAll('.search-highlight').forEach(el => {
+        const parent = el.parentNode;
+        parent.replaceChild(document.createTextNode(el.textContent), el);
+        parent.normalize();
+      });
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode: function(node) {
+          if (node.parentElement.closest('script, style, .search-feedback, .announce-bar')) return NodeFilter.FILTER_REJECT;
+          if (node.textContent.toLowerCase().includes(q.toLowerCase())) return NodeFilter.FILTER_ACCEPT;
+          return NodeFilter.FILTER_REJECT;
+        }
+      });
+      const matches = [];
+      let n;
+      while (n = walker.nextNode()) { matches.push(n); }
+      if (matches.length === 0) {
+        searchFeedback.textContent = '未找到与“' + q + '”相关的内容，请尝试其他关键词';
+        return;
+      }
+      matches.forEach(node => {
+        const text = node.textContent;
+        const idx = text.toLowerCase().indexOf(q.toLowerCase());
+        if (idx === -1) return;
+        const span = document.createElement('span');
+        span.className = 'search-highlight';
+        span.style.background = '#f5c542';
+        span.style.color = '#1a2e2a';
+        span.style.borderRadius = '3px';
+        span.style.padding = '0 2px';
+        const before = text.slice(0, idx);
+        const match = text.slice(idx, idx + q.length);
+        const after = text.slice(idx + q.length);
+        const parent = node.parentNode;
+        if (parent) {
+          const frag = document.createDocumentFragment();
+          if (before) frag.appendChild(document.createTextNode(before));
+          frag.appendChild(span);
+          span.textContent = match;
+          if (after) frag.appendChild(document.createTextNode(after));
+          parent.replaceChild(frag, node);
+        }
+      });
+      searchFeedback.textContent = '已找到 ' + matches.length + ' 处与“' + q + '”相关的内容';
+      if (matches.length > 0) {
+        const first = document.querySelector('.search-highlight');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+    });
+
+    // 移动端菜单
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const headerNav = document.getElementById('headerNav');
+    const searchBox = document.getElementById('searchBox');
+    const colLeft = document.getElementById('colLeft');
+    const colRight = document.getElementById('colRight');
+
+    mobileBtn.addEventListener('click', function() {
+      headerNav.classList.toggle('mobile-open');
+      if (window.innerWidth <= 600) {
+        searchBox.classList.toggle('mobile-open');
+      }
+      if (window.innerWidth <= 1100) {
+        colLeft.classList.toggle('mobile-open');
+        colRight.classList.toggle('mobile-open');
+      }
+    });
+
+    // 点击导航后关闭移动菜单
+    headerNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        headerNav.classList.remove('mobile-open');
+        if (window.innerWidth <= 1100) {
+          colLeft.classList.remove('mobile-open');
+          colRight.classList.remove('mobile-open');
+        }
+      });
+    });
+
+    // 平滑锚点偏移（已通过 scroll-margin 处理，此处仅处理非 section 锚点如 #top）
+    document.querySelectorAll('a[href^="/#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const id = this.getAttribute('href').replace('/#', '');
+        const target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          const offset = 38 + 66 + 16;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+</script>
+</body>
+                                                                                                                                                       </html>
