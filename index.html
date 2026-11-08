@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>91免费看网页版入口-在线观看平台_免费视频资源_网页版使用指南</title>
+  <meta name="description" content="91免费看网页版入口提供在线观看平台入口与免费视频资源导航，涵盖网页版使用指南、分类筛选、热门内容推荐与常见问题解答，适合寻找免费在线观看入口的用户参考。">
+  <meta name="keywords" content="在线观看平台,免费视频资源,网页版入口,视频分类导航,在线观看指南">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318182b'/%3E%3Cpath d='M10 8h12v4H10zm0 6h8v4h-8zm0 6h12v4H10z' fill='%23ff6b4a'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --surface: #181825;
+      --surface2: #1e1e2e;
+      --border: #2a2a3c;
+      --text: #e8e8f0;
+      --text2: #a0a0b8;
+      --text3: #6c6c84;
+      --accent: #ff6b4a;
+      --accent2: #ffb347;
+      --accent-dim: rgba(255,107,74,0.12);
+      --link: #7aa2f7;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.4);
+      --announce-h: 36px;
+      --header-h: 56px;
+      --sticky-h: calc(var(--announce-h) + var(--header-h));
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--sticky-h) + 12px); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    ::selection { background: var(--accent); color: #fff; }
+
+    /* ===== 吸顶公告条 ===== */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-h);
+      background: linear-gradient(90deg, #2a1a1a, #1e1a2e, #2a1a1a);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: var(--accent2);
+      letter-spacing: 0.3px;
+      padding: 0 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .announce-bar strong { color: var(--accent); margin-right: 6px; }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 99;
+      height: var(--header-h);
+      background: rgba(15,15,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-inner {
+      width: 100%;
+      max-width: 1400px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-svg { width: 32px; height: 32px; }
+    .brand-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      margin-left: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      font-size: 14px;
+      color: var(--text2);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-nav a:hover { background: var(--surface2); color: var(--accent); }
+    .header-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .header-search input {
+      width: 150px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .header-search input:focus { border-color: var(--accent); }
+    .header-search button {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-left: none;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .header-search button:hover { background: #e55a3a; }
+
+    /* ===== 主容器 ===== */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      padding: 40px 0 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: -60px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,107,74,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+    }
+    .hero-content { flex: 1; min-width: 0; }
+    .hero-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(255,107,74,0.3);
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.75;
+      max-width: 620px;
+      margin-bottom: 22px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #e55a3a; color: #fff; }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      border: 1px solid var(--border);
+      color: var(--text2);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      transition: border-color 0.2s, color 0.2s;
+      background: transparent;
+      cursor: pointer;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual {
+      flex-shrink: 0;
+      width: 280px;
+      height: 200px;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual svg { width: 100%; height: 100%; }
+
+    /* ===== 三栏 ===== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 24px;
+      padding-bottom: 48px;
+      align-items: start;
+    }
+
+    /* 左栏 */
+    .left-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-h) + 16px);
+      max-height: calc(100vh - var(--sticky-h) - 32px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .sidebar-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .sidebar-block h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .channel-list { list-style: none; }
+    .channel-list li { margin-bottom: 2px; }
+    .channel-list a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text2);
+      font-size: 13.5px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .channel-list a:hover { background: var(--surface2); color: var(--accent); }
+
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud span {
+      display: inline-block;
+      padding: 3px 9px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      font-size: 12px;
+      color: var(--text3);
+      cursor: default;
+      transition: border-color 0.2s;
+    }
+    .tag-cloud span:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* 中栏 */
+    .center-content { min-width: 0; }
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--text3);
+      margin-bottom: 16px;
+      padding-left: 12px;
+    }
+    .section p { color: var(--text2); margin-bottom: 12px; font-size: 14.5px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* 热门卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+    .card-tags span {
+      font-size: 11px;
+      padding: 1px 7px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-radius: 10px;
+    }
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--text3);
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--text3);
+    }
+    .card-meta .hot { color: var(--accent2); }
+
+    /* 最新更新列表 */
+    .update-list { list-style: none; }
+    .update-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      font-size: 11px;
+      color: var(--text3);
+      margin-top: 2px;
+    }
+    .update-list li:nth-child(-n+3) .update-num {
+      background: var(--accent-dim);
+      border-color: rgba(255,107,74,0.3);
+      color: var(--accent);
+    }
+    .update-body { flex: 1; min-width: 0; }
+    .update-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .update-summary {
+      font-size: 12.5px;
+      color: var(--text3);
+      line-height: 1.5;
+    }
+
+    /* 分类导航 */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .cat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 8px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+    .cat-item:hover { border-color: var(--accent); background: rgba(255,107,74,0.05); }
+    .cat-icon { font-size: 22px; margin-bottom: 4px; }
+    .cat-name { font-size: 13px; color: var(--text2); font-weight: 500; }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent2);
+      margin: 18px 0 8px;
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p { font-size: 14px; color: var(--text2); line-height: 1.75; margin-bottom: 10px; }
+    .deep-dive ul { margin: 8px 0 12px 18px; color: var(--text2); font-size: 14px; }
+    .deep-dive li { margin-bottom: 6px; line-height: 1.65; }
+
+    /* 体验指南 */
+    .guide-steps { counter-reset: step; list-style: none; }
+    .guide-steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text2);
+    }
+    .guide-steps li:last-child { border-bottom: none; }
+    .guide-steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-dim);
+      border: 1px solid rgba(255,107,74,0.3);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary {
+      padding: 12px 0;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--text3);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; color: var(--accent); }
+    .faq-answer {
+      padding: 0 0 14px;
+      font-size: 13.5px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list { list-style: none; }
+    .comment-item {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .comment-avatar {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text2);
+    }
+    .comment-text {
+      font-size: 13px;
+      color: var(--text3);
+      line-height: 1.6;
+      padding-left: 32px;
+    }
+
+    /* 相关资讯 */
+    .news-list { list-style: none; }
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+    .news-date {
+      font-size: 12px;
+      color: var(--text3);
+      margin-bottom: 4px;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.55;
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text2);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .rec-tags a:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* 精选证言 */
+    .quote-card {
+      background: var(--surface2);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .quote-card:last-child { margin-bottom: 0; }
+    .quote-text {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+    .quote-author {
+      font-size: 12px;
+      color: var(--text3);
+    }
+
+    /* 右栏 */
+    .right-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-h) + 16px);
+      max-height: calc(100vh - var(--sticky-h) - 32px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      display: block;
+      padding: 5px 10px;
+      font-size: 13px;
+      color: var(--text2);
+      border-radius: var(--radius-sm);
+      border-left: 2px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .toc-list a:hover {
+      background: var(--surface2);
+      border-left-color: var(--accent);
+      color: var(--accent);
+    }
+    .hot-list { list-style: none; }
+    .hot-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .hot-list li:last-child { border-bottom: none; }
+    .hot-rank {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--text3);
+    }
+    .hot-list li:nth-child(-n+3) .hot-rank {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+    .hot-name { color: var(--text2); line-height: 1.45; }
+
+    /* 页尾 */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 32px 0 20px;
+    }
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .footer-brand h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: var(--text3);
+      line-height: 1.7;
+    }
+    .footer-group h5 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text2);
+      margin-bottom: 10px;
+    }
+    .footer-group ul { list-style: none; }
+    .footer-group li { margin-bottom: 6px; }
+    .footer-group a {
+      font-size: 12.5px;
+      color: var(--text3);
+      transition: color 0.2s;
+    }
+    .footer-group a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom p {
+      font-size: 12px;
+      color: var(--text3);
+    }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      color: var(--text3);
+      font-size: 14px;
+      background: var(--surface2);
+      border-radius: var(--radius-sm);
+    }
+    .no-result.show { display: block; }
+
+    /* 焦点 */
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1100px) {
+      .main-layout { grid-template-columns: 160px 1fr; }
+      .right-sidebar { display: none; }
+    }
+    @media (max-width: 820px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .left-sidebar {
+        position: static;
+        max-height: none;
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .sidebar-block { min-width: 160px; flex-shrink: 0; margin-bottom: 0; }
+      .hero-inner { flex-direction: column; gap: 24px; }
+      .hero-visual { width: 100%; height: 140px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .header-search input { width: 110px; }
+    }
+    @media (max-width: 520px) {
+      .container { padding: 0 12px; }
+      .header-inner { padding: 0 12px; gap: 8px; }
+      .brand-text { font-size: 15px; }
+      .header-nav { margin-left: 0; }
+      .header-search input { width: 80px; }
+      .section { padding: 16px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 22px; }
+      .hero-desc { font-size: 13.5px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .header-search { display: none; }
+    }
+    @media (max-width: 360px) {
+      .brand-text { font-size: 13px; }
+      .hero h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner">
+    <strong>更新</strong> 网页版播放源已同步，新增多个分类筛选与免费观看线路，入口导航持续维护中。
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#ff6b4a"/>
+          <path d="M11 9h10v3.5H11V9zm0 5.5h7v3.5h-7v-3.5zm0 5.5h10V23.5H11V20z" fill="#fff"/>
+        </svg>
+        <span class="brand-text">91免费看网页版入口</span>
+      </div>
+      <nav class="header-nav" aria-label="顶部导航">
+        <a href="/#intro">简介</a>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#category">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="搜索内容..." aria-label="搜索页面内容">
+        <button type="button" id="searchBtn" aria-label="执行搜索">搜索</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="intro">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge">网页版入口 · 免费观看导航</span>
+          <h1>91免费看网页版入口</h1>
+          <p class="hero-desc">
+            汇集在线观看平台的网页版入口与免费视频资源导航，提供分类筛选、热门内容推荐、最新更新追踪与常见问题解答。无论你想找电影、剧集还是短视频，都能通过清晰的分类快速定位想看的方向。
+          </p>
+          <div class="hero-actions">
+            <a href="/#hot" class="btn-primary">浏览热门内容 →</a>
+            <a href="/#category" class="btn-outline">查看分类入口</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="200" rx="10" fill="#1e1e2e"/>
+            <rect x="20" y="20" width="110" height="70" rx="6" fill="#2a2a3c"/>
+            <rect x="30" y="30" width="90" height="8" rx="4" fill="#ff6b4a" opacity="0.7"/>
+            <rect x="30" y="44" width="60" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="30" y="56" width="75" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="30" y="68" width="50" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="150" y="20" width="110" height="70" rx="6" fill="#2a2a3c"/>
+            <rect x="160" y="30" width="90" height="8" rx="4" fill="#ffb347" opacity="0.6"/>
+            <rect x="160" y="44" width="70" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="160" y="56" width="55" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="20" y="105" width="240" height="70" rx="6" fill="#2a2a3c"/>
+            <rect x="35" y="120" width="140" height="10" rx="4" fill="#ff6b4a" opacity="0.5"/>
+            <rect x="35" y="138" width="100" height="6" rx="3" fill="#4a4a5c"/>
+            <rect x="35" y="150" width="120" height="6" rx="3" fill="#4a4a5c"/>
+            <circle cx="230" cy="140" r="18" fill="#ff6b4a" opacity="0.2"/>
+            <path d="M225 134l12 6-12 6v-12z" fill="#ff6b4a"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容 -->
+  <div class="container">
+    <div class="main-layout">
+
+      <!-- 左栏 -->
+      <aside class="left-sidebar" aria-label="频道导航与分类">
+        <div class="sidebar-block">
+          <h3>频道导航</h3>
+          <ul class="channel-list">
+            <li><a href="/#intro">平台简介</a></li>
+            <li><a href="/#hot">热门推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#category">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#quotes">精选证言</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>热门标签</h3>
+          <div class="tag-cloud">
+            <span>免费电影</span>
+            <span>在线剧集</span>
+            <span>网页版播放</span>
+            <span>短视频</span>
+            <span>动漫专区</span>
+            <span>纪录片</span>
+            <span>综艺娱乐</span>
+            <span>高清资源</span>
+            <span>分类筛选</span>
+            <span>更新追踪</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 中栏 -->
+      <main class="center-content" id="mainContent">
+
+        <!-- 1. 内容简介 -->
+        <section class="section" id="intro-section">
+          <h2 class="section-title">平台简介与内容定位</h2>
+          <p class="section-sub">了解这个网页版入口能提供什么、适合哪些用户</p>
+          <p>91免费看网页版入口是一个面向在线观看需求的导航型页面，围绕免费视频资源、网页版播放入口和内容分类筛选展开。用户可以通过本页快速了解当前可用的内容方向，包括电影、剧集、动漫、综艺、纪录片与短视频等常见垂类。页面本身不存储视频文件，而是整理入口信息与观看指引，帮助用户减少在多个平台之间反复切换的时间成本。</p>
+          <p>对于习惯在电脑浏览器上直接观看的用户来说，网页版入口的最大价值在于无需额外安装客户端，打开浏览器即可访问。本页将热门推荐、最新更新、分类入口和常见问题集中呈现，让“找内容”这件事变得更直接。如果你关注的是“免费在线观看平台哪个好用”“网页版播放是否稳定”“某类内容更新频率如何”，下面的板块会从不同角度给出参考。</p>
+          <p>内容消费场景覆盖通勤路上的短剧、午休时间的综艺、周末晚上的电影马拉松，以及睡前刷几集的动漫连载。不同场景对应不同的内容长度和节奏偏好，分类入口和推荐卡片都会尽量标注类型标签，方便按需选择。页面还整理了用户常见疑问，例如是否需要注册、是否有广告干扰、手机端能否正常使用等，帮助新用户快速上手。</p>
+          <p>需要留意的是，在线观看平台的内容库和入口地址会随时间调整，本页展示的热度、评分、更新日期均为示例数据，用于说明页面结构。实际使用时建议结合自己的网络环境和设备情况，选择流畅度合适的线路。如果你对某个分类特别感兴趣，可以通过左栏频道或页面内锚点快速跳转，减少滚动查找的时间。</p>
+        </section>
+
+        <!-- 2. 热门内容推荐 -->
+        <section class="section" id="hot">
+          <h2 class="section-title">热门内容推荐</h2>
+          <p class="section-sub">近期关注度较高的内容方向，含类型标签与简短看点</p>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-title">都市情感短剧《夜色正浓》</div>
+              <div class="card-tags"><span>都市情感</span><span>短剧</span><span>免费观看</span></div>
+              <div class="card-desc">聚焦职场与情感双线叙事，单集时长约15分钟，适合通勤或午休碎片时间观看。</div>
+              <div class="card-meta"><span>热度 9.2k</span><span class="hot">更新至18集</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">悬疑推理剧《迷雾档案》</div>
+              <div class="card-tags"><span>悬疑推理</span><span>剧集</span><span>网页版播放</span></div>
+              <div class="card-desc">以单元案件串联主线，节奏紧凑，适合喜欢跟着线索推理的观众，支持网页端直接观看。</div>
+              <div class="card-meta"><span>热度 8.7k</span><span class="hot">更新至12集</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">国产动画《星海旅人》</div>
+              <div class="card-tags"><span>动漫专区</span><span>科幻</span><span>免费资源</span></div>
+              <div class="card-desc">科幻冒险题材，画风明亮，剧情围绕少年探索未知星域展开，适合动漫爱好者追更。</div>
+              <div class="card-meta"><span>热度 7.9k</span><span class="hot">更新至24话</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">美食纪录片《街角味道》</div>
+              <div class="card-tags"><span>纪录片</span><span>美食</span><span>高清资源</span></div>
+              <div class="card-desc">走访城市街巷小馆，记录平凡食材背后的手艺与故事，适合下饭或放松时观看。</div>
+              <div class="card-meta"><span>热度 6.5k</span><span class="hot">全6集</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">喜剧综艺《周末开麦》</div>
+              <div class="card-tags"><span>综艺娱乐</span><span>喜剧</span><span>在线观看</span></div>
+              <div class="card-desc">脱口秀与即兴喜剧结合，每期邀请不同嘉宾，适合周末放松解压，网页端可看。</div>
+              <div class="card-meta"><span>热度 7.2k</span><span class="hot">更新至第8期</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title">动作电影《极速边缘》</div>
+              <div class="card-tags"><span>动作片</span><span>电影</span><span>免费电影</span></div>
+              <div class="card-desc">街头赛车与犯罪题材结合，场面调度紧凑，适合喜欢速度感和动作场面的观众。</div>
+              <div class="card-meta"><span>热度 8.1k</span><span class="hot">已上线</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="section" id="latest">
+          <h2 class="section-title">最新更新与热门动态</h2>
+          <p class="section-sub">内容库近期新增条目与更新进度一览</p>
+          <ul class="update-list">
+            <li>
+              <span class="update-num">1</span>
+              <div class="update-body">
+                <div class="update-name">《夜色正浓》更新至第18集</div>
+                <div class="update-summary">情感线进入转折阶段，新角色登场推动主线发展。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">2</span>
+              <div class="update-body">
+                <div class="update-name">《迷雾档案》新增第12集</div>
+                <div class="update-summary">单元案件收束，主线线索进一步浮出水面。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">3</span>
+              <div class="update-body">
+                <div class="update-name">动漫《星海旅人》第24话上线</div>
+                <div class="update-summary">第一季阶段性完结，主角团面临关键抉择。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">4</span>
+              <div class="update-body">
+                <div class="update-name">纪录片《街角味道》全6集可看</div>
+                <div class="update-summary">新增两座城市特辑，涵盖早餐与夜宵主题。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">5</span>
+              <div class="update-body">
+                <div class="update-name">综艺《周末开麦》第8期更新</div>
+                <div class="update-summary">主题围绕“职场吐槽”展开，嘉宾互动密集。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">6</span>
+              <div class="update-body">
+                <div class="update-name">电影《极速边缘》加入免费片库</div>
+                <div class="update-summary">动作场面占比高，适合大屏网页端观看。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">7</span>
+              <div class="update-body">
+                <div class="update-name">短剧频道新增“都市情感”分类</div>
+                <div class="update-summary">便于按题材筛选，减少跨类浏览时间。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-num">8</span>
+              <div class="update-body">
+                <div class="update-name">网页版播放线路优化提示</div>
+                <div class="update-summary">部分内容新增备用线路，卡顿时可切换尝试。</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="category">
+          <h2 class="section-title">分类入口</h2>
+          <p class="section-sub">按内容类型快速定位，名称对应常见搜索类别</p>
+          <div class="cat-grid">
+            <div class="cat-item">
+              <span class="cat-icon">🎬</span>
+              <span class="cat-name">免费电影</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">📺</span>
+              <span class="cat-name">在线剧集</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">🎭</span>
+              <span class="cat-name">动漫专区</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">🎤</span>
+              <span class="cat-name">综艺娱乐</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">🌍</span>
+              <span class="cat-name">纪录片</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">📱</span>
+              <span class="cat-name">短视频</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">🔞</span>
+              <span class="cat-name">都市情感</span>
+            </div>
+            <div class="cat-item">
+              <span class="cat-icon">🕵️</span>
+              <span class="cat-name">悬疑推理</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section deep-dive" id="deep">
+          <h2 class="section-title">深度解析：网页版观看的实用要点</h2>
+          <p class="section-sub">从入口选择到播放体验，梳理几个容易被忽略的细节</p>
+          <h3>网页版入口的常见形式</h3>
+          <p>多数在线观看平台的网页版入口会以导航页、频道页或聚合搜索页的形式出现。91免费看网页版入口这类页面的作用，是把分散的入口信息集中展示，让用户不必逐个尝试。判断一个入口是否可用，可以观察页面是否正常加载内容列表、分类标签是否可点击、播放区域是否有明确的线路切换选项。如果页面长时间空白或提示加载失败，通常需要更换线路或稍后重试。</p>
+          <h3>免费资源与观看体验的平衡</h3>
+          <p>免费视频资源往往伴随广告或线路不稳定的情况，这属于常见现象。比较实用的做法是优先选择标注了“备用线路”或“高清资源”的条目，并在播放前确认网络环境是否稳定。对于画质要求不高的用户，标准清晰度通常加载更快；如果使用大屏设备观看，再切换高清线路。网页版播放的优势在于不占用本地存储，但浏览器的解码能力与设备性能相关，老旧设备上建议降低画质以保持流畅。</p>
+          <h3>分类筛选与更新追踪的方法</h3>
+          <p>按类型筛选是提高找片效率的关键。本页的分类入口覆盖免费电影、在线剧集、动漫专区、综艺娱乐、纪录片、短视频等方向，每个分类下再按热度或更新时间排序。如果想追踪某部内容的更新进度，可以关注“最新更新”板块，那里会标注集数或期数变化。对于连载型内容，更新频率通常为每周1至3集，具体以条目说明为准。收藏页面或记录分类入口，比每次重新搜索更省时间。</p>
+          <h3>移动端与桌面端的差异</h3>
+          <p>网页版在手机浏览器上同样可以访问，但受限于屏幕尺寸，部分页面会压缩侧栏或折叠导航。本页针对移动端做了横向频道导航和单列卡片布局，保证文字可读、按钮可点。桌面端的优势在于可以同时查看分类、推荐和目录，适合需要快速比较多个选项的场景。无论哪种设备，建议保持浏览器更新到较新版本，以获得更好的视频解码和页面渲染表现。</p>
+          <p>总的来说，把入口导航、分类筛选和更新追踪结合起来使用，能明显减少无效点击。先确定想看的大类，再按热度或更新时间缩小范围，最后根据线路情况选择播放，这个顺序适用于大多数在线观看场景。</p>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="guide">
+          <h2 class="section-title">体验指南</h2>
+          <p class="section-sub">页面结构、筛选方式与移动端适配说明</p>
+          <ol class="guide-steps">
+            <li>从顶部导航或左栏频道选择感兴趣的内容方向，如“热门推荐”或“分类入口”。</li>
+            <li>在分类入口中按类型筛选，卡片和列表会标注热度、更新进度等参考信息。</li>
+            <li>使用页头搜索框可以快速查找当前页面内的内容名称，无结果时会给出提示。</li>
+            <li>移动端访问时，左栏会转为横向滑动频道，右栏内容自动收起到主内容之后。</li>
+            <li>若播放卡顿，优先尝试条目内标注的备用线路，或降低画质后重新加载。</li>
+            <li>想追踪更新，可定期查看“最新更新”板块，或记录分类入口便于回访。</li>
+          </ol>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <h2 class="section-title">常见问题</h2>
+          <p class="section-sub">围绕网页版入口与免费观看的高频疑问</p>
+          <details class="faq-item">
+            <summary>91免费看网页版入口需要注册或登录吗？</summary>
+            <div class="faq-answer">本页作为导航型页面，不强制要求注册即可浏览分类和推荐信息。实际播放是否需要登录取决于所指向的平台规则，部分免费资源可直接观看，部分可能需要简单验证。建议以具体条目的说明为准。</div>
+          </details>
+          <details class="faq-item">
+            <summary>免费在线观看平台的内容一般多久更新一次？</summary>
+            <div class="faq-answer">连载型剧集和动漫通常每周更新1至3集，综艺多为每周一期，电影和纪录片则不定时上新。本页“最新更新”板块会标注示例进度，实际频率以平台安排为准，建议关注条目内的更新说明。</div>
+          </details>
+          <details class="faq-item">
+            <summary>网页版播放和客户端观看有什么区别？</summary>
+            <div class="faq-answer">网页版无需安装，打开浏览器即可访问，适合临时观看或设备存储空间有限的情况；客户端通常在缓存、推送和播放稳定性上有额外优化。如果只是偶尔看看短剧或综艺，网页版已经足够；高频追更的用户可以按需选择。</div>
+          </details>
+          <details class="faq-item">
+            <summary>手机浏览器能正常使用这个网页版入口吗？</summary>
+            <div class="faq-answer">可以。本页针对手机屏幕做了适配，频道导航转为横向滑动，卡片和列表改为单列显示，正文保持可读字号。建议使用较新版本的主流浏览器，并保持网络稳定。</div>
+          </details>
+          <details class="faq-item">
+            <summary>播放卡顿或加载失败时应该怎么处理？</summary>
+            <div class="faq-answer">先检查网络连接，然后尝试切换条目内提供的备用线路。如果仍不流畅，可以适当降低画质，或关闭其他占用带宽的应用。浏览器缓存过多时，清理后重新加载也可能改善体验。</div>
+          </details>
+          <details class="faq-item">
+            <summary>怎么快速找到某一类内容，比如悬疑短剧或美食纪录片？</summary>
+            <div class="faq-answer">可以使用分类入口中的“悬疑推理”“纪录片”等类别，也可以利用页头搜索框输入关键词进行页面内查找。热门推荐卡片上的类型标签同样可以作为筛选线索，按标签方向浏览效率更高。</div>
+          </details>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <h2 class="section-title">用户评论</h2>
+          <p class="section-sub">来自不同使用场景的反馈，包含中性评价</p>
+          <ul class="comment-list">
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">林</span><span class="comment-nick">林间小径</span></div>
+              <div class="comment-text">分类挺清楚的，找短剧直接点都市情感就行，不用翻半天。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">陈</span><span class="comment-nick">陈默看片</span></div>
+              <div class="comment-text">网页版打开就能看，比装一堆客户端省事，适合我这种偶尔看看的人。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">苏</span><span class="comment-nick">苏打气泡</span></div>
+              <div class="comment-text">更新列表如果能再详细一点就更好了，现在只能看到集数变化。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">周</span><span class="comment-nick">周末放映员</span></div>
+              <div class="comment-text">纪录片分类里的美食题材不错，下饭看很合适，画质也还可以。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">吴</span><span class="comment-nick">吴聊看看</span></div>
+              <div class="comment-text">手机端排版比想象中好，横向滑频道挺顺手，没有出现错位。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">郑</span><span class="comment-nick">郑在追剧</span></div>
+              <div class="comment-text">悬疑剧的推荐合我胃口，线索埋得比较密，适合一口气看几集。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">何</span><span class="comment-nick">何处惹尘埃</span></div>
+              <div class="comment-text">部分线路偶尔要刷新一次，不过免费资源也能理解，整体能用。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">许</span><span class="comment-nick">许愿不加班</span></div>
+              <div class="comment-text">搜索框找内容挺快的，输入片名就能定位，无结果提示也清楚。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">高</span><span class="comment-nick">高桥凉介</span></div>
+              <div class="comment-text">动作片资源更新不算快，但已有的几部看着还行，网页播放不卡。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">孙</span><span class="comment-nick">孙悟饭团</span></div>
+              <div class="comment-text">动漫专区分类清晰，科幻和热血分开，找起来方便很多。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">刘</span><span class="comment-nick">刘览器用户</span></div>
+              <div class="comment-text">页面加载速度可以，就是希望热门推荐能多换换，别老那几部。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">赵</span><span class="comment-nick">赵小刀</span></div>
+              <div class="comment-text">综艺更新挺及时的，周末开麦每期都追，网页看不用等下载。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">钱</span><span class="comment-nick">钱多多</span></div>
+              <div class="comment-text">分类入口的图标和名字对得上，不像有些站全是抽象词。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">李</span><span class="comment-nick">李看山</span></div>
+              <div class="comment-text">希望后续能加一个按更新时间排序的选项，现在主要靠手动找。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">王</span><span class="comment-nick">王不留行</span></div>
+              <div class="comment-text">整体导航逻辑顺，从热门推荐点进去看完，还能回分类继续挑。</div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header"><span class="comment-avatar">张</span><span class="comment-nick">张望星空</span></div>
+              <div class="comment-text">纪录片和电影两个分类区分得清楚，不会混在一起，这点好评。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <h2 class="section-title">相关资讯</h2>
+          <p class="section-sub">内容方向与观看方式的变化观察</p>
+          <ul class="news-list">
+            <li class="news-item">
+              <div class="news-title">短剧内容消费时长持续增长</div>
+              <div class="news-date">2025-03-18</div>
+              <div class="news-summary">单集15分钟以内的短剧在通勤和午休场景中关注度上升，都市情感与悬疑推理成为热门方向。</div>
+            </li>
+            <li class="news-item">
+              <div class="news-title">网页版播放体验的优化方向</div>
+              <div class="news-date">2025-03-12</div>
+              <div class="news-summary">浏览器解码能力提升，网页端高清播放的卡顿情况有所改善，备用线路切换成为常见配置。</div>
+            </li>
+            <li class="news-item">
+              <div class="news-title">国产动漫分类细化趋势明显</div>
+              <div class="news-date">2025-03-05</div>
+              <div class="news-summary">科幻、热血、治愈等标签的分开设置，让动漫专区的筛选效率提高，用户按类型找片更直接。</div>
+            </li>
+            <li class="news-item">
+              <div class="news-title">美食纪录片带动“下饭观看”场景</div>
+              <div class="news-date">2025-02-26</div>
+              <div class="news-summary">街巷题材纪录片在用餐时间段浏览量较高，单集时长与内容节奏适合碎片化观看。</div>
+            </li>
+            <li class="news-item">
+              <div class="news-title">免费视频资源的线路稳定性讨论</div>
+              <div class="news-date">2025-02-19</div>
+              <div class="news-summary">用户对不同线路的画质与加载速度反馈不一，建议根据网络环境选择标准或高清线路。</div>
+            </li>
+            <li class="news-item">
+              <div class="news-title">移动端网页观看比例上升</div>
+              <div class="news-date">2025-02-10</div>
+              <div class="news-summary">手机浏览器访问在线观看页面的占比提高，横向导航与单列卡片成为移动端常见布局。</div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="recommend">
+          <h2 class="section-title">相关推荐</h2>
+          <p class="section-sub">按具体内容方向延伸的标签索引</p>
+          <div class="rec-tags">
+            <a href="/#hot">都市情感短剧推荐</a>
+            <a href="/#hot">悬疑推理剧集在线看</a>
+            <a href="/#category">免费电影高清资源</a>
+            <a href="/#category">国产动漫科幻专区</a>
+            <a href="/#latest">美食纪录片全集合集</a>
+            <a href="/#latest">喜剧综艺更新追踪</a>
+            <a href="/#guide">网页版播放线路切换</a>
+            <a href="/#faq">手机端观看适配说明</a>
+          </div>
+        </section>
+
+        <!-- 11. 精选证言 -->
+        <section class="section" id="quotes">
+          <h2 class="section-title">精选证言</h2>
+          <p class="section-sub">来自内容消费场景的简短反馈</p>
+          <div class="quote-card">
+            <div class="quote-text">“平时午休只有半小时，短剧刚好能看两集，分类里直接找都市情感，不用自己筛。” </div>
+            <div class="quote-author">—— 上班族 · 林女士</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-text">“悬疑剧我比较挑，这里的推荐标签写得具体，点进去看简介就能判断对不对胃口。” </div>
+            <div class="quote-author">—— 剧迷 · 陈先生</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-text">“手机浏览器打开就能用，频道可以横向滑，比一些需要横屏的站点友好。” </div>
+            <div class="quote-author">—— 移动端用户 · 周同学</div>
+          </div>
+        </section>
+
+        <!-- 搜索无结果提示 -->
+        <div class="no-result" id="noResult">没有找到相关内容，试试其他关键词或浏览上方分类入口。</div>
+
+      </main>
+
+      <!-- 右栏 -->
+      <aside class="right-sidebar" aria-label="辅助阅读">
+        <div class="sidebar-block">
+          <h3>页内目录</h3>
+          <ul class="toc-list">
+            <li><a href="/#intro-section">平台简介</a></li>
+            <li><a href="/#hot">热门推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#category">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#quotes">精选证言</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>热门条目</h3>
+          <ul class="hot-list">
+            <li><span class="hot-rank">1</span><span class="hot-name">《夜色正浓》都市情感短剧更新</span></li>
+            <li><span class="hot-rank">2</span><span class="hot-name">《迷雾档案》悬疑推理剧集</span></li>
+            <li><span class="hot-rank">3</span><span class="hot-name">《星海旅人》动漫科幻专区</span></li>
+            <li><span class="hot-rank">4</span><span class="hot-name">《街角味道》美食纪录片</span></li>
+            <li><span class="hot-rank">5</span><span class="hot-name">《周末开麦》喜剧综艺</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>延伸阅读</h3>
+          <ul class="toc-list">
+            <li><a href="/#deep">网页版入口的常见形式</a></li>
+            <li><a href="/#guide">分类筛选与更新追踪</a></li>
+            <li><a href="/#faq">免费观看常见疑问</a></li>
+            <li><a href="/#news">近期内容方向观察</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>91免费看网页版入口</h4>
+          <p>面向在线观看需求的导航型页面，整理免费视频资源入口、分类筛选与观看指引，帮助用户减少查找时间。</p>
+        </div>
+        <div class="footer-group">
+          <h5>内容导航</h5>
+          <ul>
+            <li><a href="/#hot">热门推荐</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#category">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h5>使用帮助</h5>
+          <ul>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h5>内容分类</h5>
+          <ul>
+            <li><a href="/#category">免费电影</a></li>
+            <li><a href="/#category">在线剧集</a></li>
+            <li><a href="/#category">动漫专区</a></li>
+            <li><a href="/#category">综艺娱乐</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 91免费看网页版入口 · 导航型示例页面</p>
+        <p>部分内容为示例数据，仅用于展示页面结构</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // 本地搜索：对中栏内容做高亮与滚动定位，同时提供无结果反馈
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const noResult = document.getElementById('noResult');
+      const mainContent = document.getElementById('mainContent');
+
+      function clearHighlights() {
+        mainContent.querySelectorAll('mark.search-highlight').forEach(mark => {
+          const parent = mark.parentNode;
+          parent.replaceChild(document.createTextNode(mark.textContent), mark);
+          parent.normalize();
+        });
+      }
+
+      function performSearch() {
+        const query = searchInput.value.trim();
+        clearHighlights();
+        noResult.classList.remove('show');
+        if (!query) return;
+
+        const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        const walker = document.createTreeWalker(mainContent, NodeFilter.SHOW_TEXT, {
+          acceptNode: function(node) {
+            if (node.parentNode.tagName === 'SCRIPT' || node.parentNode.tagName === 'STYLE') return NodeFilter.FILTER_REJECT;
+            if (!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+            if (regex.test(node.textContent)) {
+              regex.lastIndex = 0;
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_REJECT;
+          }
+        });
+
+        const textNodes = [];
+        let node;
+        while (node = walker.nextNode()) {
+          textNodes.push(node);
+        }
+
+        if (textNodes.length === 0) {
+          noResult.classList.add('show');
+          return;
+        }
+
+        let firstMatchEl = null;
+        textNodes.forEach(textNode => {
+          const text = textNode.textContent;
+          const fragment = document.createDocumentFragment();
+          let lastIndex = 0;
+          let match;
+          regex.lastIndex = 0;
+          while ((match = regex.exec(text)) !== null) {
+            if (match.index > lastIndex) {
+              fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+            }
+            const mark = document.createElement('mark');
+            mark.className = 'search-highlight';
+            mark.textContent = match[0];
+            mark.style.background = 'var(--accent)';
+            mark.style.color = '#fff';
+            mark.style.borderRadius = '2px';
+            mark.style.padding = '0 2px';
+            fragment.appendChild(mark);
+            lastIndex = regex.lastIndex;
+            if (!firstMatchEl) firstMatchEl = mark;
+          }
+          if (lastIndex < text.length) {
+            fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+          }
+          textNode.parentNode.replaceChild(fragment, textNode);
+        });
+
+        if (firstMatchEl) {
+          firstMatchEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          performSearch();
+        }
+      });
+    })();
+  </script>
+</body>
+                </html>
